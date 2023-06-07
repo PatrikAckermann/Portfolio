@@ -1,0 +1,33 @@
+{
+    "languages": {
+        "csharp": {
+            "name": "C#"
+        },
+        "python": {
+            "name": "Python"
+        },
+        "html": {
+            "name": "HTML"
+        },
+        "css": {
+            "name": "CSS"
+        },
+        "js": {
+            "name": "Javascript"
+        }
+    },
+    "projects": {
+        "chatApp": {
+            "name": "Chat App"
+        },
+        "weatherApp": {
+            "name": "Wetter App"
+        },
+        "posterGenerator": {
+            "name": "Poster Generator"
+        },
+        "csvParser": {
+            "name": "JS CSV Parser"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.Welcome {
+    text-align: center;
+}
+
+.Welcome > h1 {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: 144px;
+}
