@@ -14,8 +14,8 @@ button {
     background-color: white;
     color: black;
     border: none;
-    border-radius: 15px;
-    padding: 15px 30px 15px 30px; /*TOP RIGHT BOTTOM LEFT*/
+    border-radius: 30px;
+    padding: 10px 40px 10px 40px; /*TOP RIGHT BOTTOM LEFT*/
     font-size: 16px;
 }
 
@@ -45,4 +45,8 @@ button:active {
     scroll-snap-align: start;
     width: 100vw;
     height: calc(100vh - 40px); /* Window height - footer*/
+}
+
+.BackButton {
+    margin: 15px;
 }

@@ -12,6 +12,7 @@
 .HomeTitle {
     font-size: 72px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .HomeSubtitle {
@@ -49,5 +50,5 @@
 }
 
 .HomeContactButton {
-    width: 120px;
+    width: 140px;
 }

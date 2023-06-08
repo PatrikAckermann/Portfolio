@@ -1,0 +1,23 @@
+.ContactPageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContactTitle {
+    font-size: 72px;
+}
+
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactForm > input, .ContactForm > textarea {
+    width: 80vw;
+    max-width: 500px;
+}
+
+.ContactForm > textarea {
+    flex: 1;
+}

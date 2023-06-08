@@ -11,8 +11,6 @@ export default function Layout() {
     var navigate = useNavigate()
 
     function scrollToArea(name) {
-
-        navigate(name)
         var container = document.getElementsByClassName("LayoutContainer")[0]
 
         if (name === "projects") {
@@ -21,10 +19,17 @@ export default function Layout() {
             var obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
         } else if (name === "contact") {
             var obj = {left: window.innerWidth, top: window.innerHeight * 2 - 40, behavior: "smooth"}
+        } else if (name === "about") {
+            var obj = {left: window.innerWidth, top: 0, behavior: "smooth"}
         } else {
             var obj = {left: window.innerWidth, top: window.innerHeight - 40, behavior: "smooth"}
         }
         container.scroll(obj)
+        if (name === "/") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
+            setTimeout(() => navigate(name), 500)
+        } else {
+            navigate(name)
+        }
     }
 
     window.scrollToArea = scrollToArea

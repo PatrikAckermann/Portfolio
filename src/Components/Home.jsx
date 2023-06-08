@@ -34,8 +34,8 @@ export default function Home(props) {
     return (
     <div className="Home LayoutElement">
         <div className="HomeTitleSection">
-            <h1 className="HomeTitle">Patrik Ackermann</h1>
-            <h2 className="HomeSubtitle">Keine Ahnung was ich hier schreiben soll</h2>
+            <h1 className="HomeTitle" onClick={() => changePage("about")}>Patrik Ackermann</h1>
+            <h2 className="HomeSubtitle">Irgend ein Untertitel, keine Ahnung</h2>
         </div>
         <div className="HomeSelectionContainer">
             <div className="HomeSelection">
