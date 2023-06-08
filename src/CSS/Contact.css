@@ -13,11 +13,31 @@
     flex-direction: column;
 }
 
+.ContactForm > label {
+    align-self: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
 .ContactForm > input, .ContactForm > textarea {
+    border: 1px #ffffff solid;
+    border-radius: 20px;
     width: 80vw;
+    min-height: 40px;
     max-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
 }
 
 .ContactForm > textarea {
-    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 55vh;
+    resize: none;
 }

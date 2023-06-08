@@ -9,6 +9,7 @@ import React from "react"
 export default function Layout() {
     var loaderData = useLoaderData()
     var navigate = useNavigate()
+    var [project, setProject] = React.useState({})
 
     function scrollToArea(name) {
         var container = document.getElementsByClassName("LayoutContainer")[0]
@@ -26,7 +27,7 @@ export default function Layout() {
         }
         container.scroll(obj)
         if (name === "/") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
-            setTimeout(() => navigate(name), 500)
+            setTimeout(() => navigate(name), 300)
         } else {
             navigate(name)
         }
@@ -43,14 +44,14 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Home loaderData={loaderData} scrollToArea={scrollToArea}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
-            <Outlet context={{scrollToArea: scrollToArea}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Home setProject={setProject} loaderData={loaderData} scrollToArea={scrollToArea}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
         </div>
         <Footer />
     </div>)

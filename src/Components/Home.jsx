@@ -11,8 +11,11 @@ export default function Home(props) {
         return <div className="Home LayoutElement"></div>
     }
 
-    function changePage(type) {
+    function changePage(type, item) {
         props.scrollToArea(type)
+        if (type === "projects") {
+            props.setProject(loaderData.projects[item])
+        }
     }
 
     // Load programming languages
@@ -20,7 +23,7 @@ export default function Home(props) {
         languageListItems.push({key: key, ...loaderData.languages[key]})
     }
     languageListItems = languageListItems.map(item => {
-        return <li key={item.key} onClick={() => changePage("languages")}>{item.name}</li>
+        return <li key={item.key} onClick={() => changePage("languages", item.key)}>{item.name}</li>
     })
 
     // Load projects
@@ -28,7 +31,7 @@ export default function Home(props) {
         projectListItems.push({key: key, ...loaderData.projects[key]})
     }
     projectListItems = projectListItems.map(item => {
-        return <li key={item.key} onClick={() => changePage("projects")}>{item.name}</li>
+        return <li key={item.key} onClick={() => changePage("projects", item.key)}>{item.name}</li>
     })
 
     return (
