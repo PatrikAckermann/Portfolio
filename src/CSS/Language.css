@@ -1,0 +1,45 @@
+.LanguagePageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LanguageFlexContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.LanguageFlexLeft {
+    margin: 30px;
+    width: calc(50vw - 60px);
+}
+
+.LanguageTitle {
+    font-size: 72px;
+}
+
+.LanguageDescription {
+    font-size: 20px;
+    white-space: pre-line;
+}
+
+.LanguageFlexRight {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+}
+
+.LanguageFlexRight > ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+.LanguageListItem {
+    font-size: 20px;
+}
+
+.Pointer {
+    cursor: pointer;
+}

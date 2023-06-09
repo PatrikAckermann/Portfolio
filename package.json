@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://patrikackermann.github.io/Portfolio",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

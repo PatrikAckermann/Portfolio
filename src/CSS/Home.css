@@ -39,12 +39,16 @@
 .HomeSelection > ul {
     list-style-type: circle;
     list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .HomeSelection > ul > li {
     font-size: 18px;
     cursor: pointer;
     user-select: none;
+    width: fit-content;
 }
 .HomeSpacer {
     height: auto;

@@ -1,18 +1,25 @@
 import "../CSS/Project.css"
-import { Link, useOutletContext } from "react-router-dom"
+import { Link, useOutletContext, useParams } from "react-router-dom"
 
 
 export default function Project(props) {
     var context = useOutletContext()
-    var project = context.project
+    var params = useParams()
+    var project = context.data.projects[params.project]
     var currentImg = 0
 
     var images = []
     var technologies = []
 
+    console.log(params)
+
     if (project.imgs !== undefined) {
         images = project.imgs.map(img => {
-            return <div className="ProjectImgContainer" key={img}><img src={require("./" + img)} alt="Bild konnte nicht geladen werden."/></div>
+            var image = img.startsWith("http") ? img : require("./" + img)
+            if (img.endsWith("mp4")) {
+                return <div className="ProjectImgContainer" key={img}><video autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
+            }
+            return <div className="ProjectImgContainer" key={img}><img src={image} alt="Bild konnte nicht geladen werden."/></div>
         })
     }
 
@@ -57,8 +64,8 @@ export default function Project(props) {
                         {technologies}
                     </ul>
                     {project.button1 !== undefined && <div className="ProjectButtonsDiv">
-                        <button id="button1">{project.button1.name}</button>
-                        <button>{project.button2.name}</button>
+                        <button id="button1" onClick={() => window.open(project.button1.link)}>{project.button1.name}</button>
+                        <button id="button2" onClick={() => window.open(project.button2.link)}>{project.button2.name}</button>
                     </div>}
                 </div>
                 <div className="ProjectFlexRight">

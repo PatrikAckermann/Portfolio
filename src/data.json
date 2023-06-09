@@ -1,0 +1,92 @@
+{
+    "languages": {
+        "csharp": {
+            "name": "C#",
+            "description": "Description",
+            "projects": ["weatherApp"],
+            "skills": ["Entity Framework Core", "WPF", "ASP.NET APIs"]
+        },
+        "python": {
+            "name": "Python",
+            "description": "Description",
+            "projects": ["chatApp", "minesweeper"],
+            "skills": ["SQLite", "Sockets", "Tkinter"]
+        },
+        "html": {
+            "name": "HTML",
+            "description": "Description",
+            "projects": [],
+            "skills": []
+        },
+        "css": {
+            "name": "CSS",
+            "description": "Description",
+            "projects": [],
+            "skills": []
+        },
+        "js": {
+            "name": "Javascript",
+            "description": "Alle Webseiten, welche ich bereits programmiert habe, sind unter anderem in JavaScript geschrieben. Dies tue ich vorallem mit React und vielen weiteren kleineren Bibliotheken.\n\nDer Poster Generator ist eine Webseite, die grösstenteils in Javascript mit React geschrieben ist. In diesem Projekt konnte ich viel über die Sprache lernen. Weitere kleinere Projekte die ich mit React gemacht habe sind der CanvasEditor und einige Übungsseiten. Auch dieses Portfolio wurde mit React & React Router programmiert.\n\nMit dem CSV Parser habe ich erste Erfahrungen im NPM Pakete erstellen und veröffentlichen gemacht.\n\nWenige Projekte von mir sind auch in purem Javascript, ohne Bibliotheken, geschrieben. Eines davon ist die ToDoList Webseite.",
+            "projects": ["posterGenerator", "csvParser"],
+            "skills": ["NPM", "React", "React Router"]
+        }
+    },
+    "projects": {
+        "chatApp": {
+            "name": "Chat App",
+            "description": "Die Chat App lässt dich mit anderen Usern chatten. Mit einem Login, bestehend aus Nutzername und Passwort, meldest du dich an. Danach kannst du andere Nutzer mit ihrem Nutzernamen finden und mit ihnen einen Chat starten. \n\nDie Accounts und Chats werden in einer Serverseitigen Datenbank gespeichert. Der Client hat auch eine Datenbank mit allen Chats die der Benutzer hat.",
+            "technologies": ["Python", "SQLite", "Sockets", "Tkinter"],
+            "imgs": ["img/ChatApp1.png", "img/ChatApp2.png"],
+            "button1": {
+                "name": "Herunterladen",
+                "link": "https://github.com/PatrikAckermann/ChatApp/archive/refs/heads/main.zip"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/ChatApp"
+            }
+        },
+        "weatherApp": {
+            "name": "C# Wetter App",
+            "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
+            "technologies": ["C#", "WPF"],
+            "imgs": ["img/WeatherApp1.png"],
+            "button1": {
+                "name": "Herunterladen",
+                "link": "https://github.com/PatrikAckermann/WPFWeatherApp/releases/download/1.0/Weather.App.1_0.zip"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/WPFWeatherApp"
+            }
+        },
+        "posterGenerator": {
+            "name": "Poster Generator",
+            "description": "Im Poster Generator können Poster mit Formen und Text erstellt werden. Die Formen und Texte haben viele Einstellungen wie Grösse, Farbe, Position, Animation und vieles mehr. Das Poster kann als PNG oder als WEBM heruntergeladen werden.",
+            "technologies": ["JavaScript", "HTML", "CSS", "React"],
+            "imgs": ["img/PosterGenerator1.png", "https://user-images.githubusercontent.com/87939030/235651684-cf7f1b00-3553-4293-88e7-b0398edfbcb0.mp4", "https://user-images.githubusercontent.com/87939030/237988063-045a1502-3b4f-4aa5-9a4f-3d58c4982dd0.mp4"],
+            "button1": {
+                "name": "Webseite öffnen",
+                "link": "https://patrikackermann.github.io/poster-generator"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/poster-generator"
+            }
+        },
+        "csvParser": {
+            "name": "JS CSV Parser",
+            "description": "Der CSV Parser nimmt mit seiner einzigen Funktion, csvparse(), einen CSV String entgegen und wandelt ihn in ein Javascript Objekt um. Mit den Optionen kann angepasst werden, wie die Datei gelesen wird. Man kann zum Beispiel eine Kategorie erstellen, die dann den Aufbau des Objekts verändert. Man kann auch den Datentyp einer Spalte umwandeln lassen.",
+            "technologies": ["Javascript", "NPM", "lodash"],
+            "imgs": ["img/CSVParse1.png", "img/CSVParse2.png"],
+            "button1": {
+                "name": "Auf NPM ansehen",
+                "link": "https://www.npmjs.com/package/parse-csv-to-obj"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/csvparse"
+            }
+        }
+    }
+}

@@ -9,14 +9,14 @@ import React from "react"
 export default function Layout() {
     var loaderData = useLoaderData()
     var navigate = useNavigate()
-    var [project, setProject] = React.useState({})
+    var location = useLocation()
 
     function scrollToArea(name) {
         var container = document.getElementsByClassName("LayoutContainer")[0]
 
-        if (name === "projects") {
+        if (name.startsWith("projects")) {
             var obj = {left: window.innerWidth * 2, top: window.innerHeight - 40, behavior: "smooth"}
-        } else if (name === "languages"){
+        } else if (name.startsWith("languages")){
             var obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
         } else if (name === "contact") {
             var obj = {left: window.innerWidth, top: window.innerHeight * 2 - 40, behavior: "smooth"}
@@ -44,21 +44,21 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Home setProject={setProject} loaderData={loaderData} scrollToArea={scrollToArea}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
-            <Outlet context={{scrollToArea: scrollToArea, project: project}}/>
+            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea}}/> : <Empty/>}
+            <Empty/>
+            <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/>
+            <Home loaderData={loaderData} scrollToArea={scrollToArea}/>
+            {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/> : <Empty/>}
+            <Empty/>
+            {location.pathname.startsWith("/contact") ? <Outlet context={{scrollToArea: scrollToArea}}/> : <Empty/>}
+            <Empty/>
         </div>
         <Footer />
     </div>)
 }
 
 export function loader() {
-    return fetch("data.json").then(x => x.json())
+    return require("../data.json")
 }
 
 function Empty() {
