@@ -19,7 +19,7 @@ export default function Language() {
 
     return (
         <div className="Language LayoutElement">
-            <button onClick={() => context.scrollToArea("/")} className="BackButton">Zurück</button>
+            <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
             <div className="LanguagePageContent">
                 <h1 className="LanguageTitle">{language.name}</h1>
                 <div className="LanguageFlexContainer">

@@ -4,7 +4,7 @@ import { useOutletContext } from "react-router-dom"
 export default function Welcome(props) {
     var context = useOutletContext()
     return (<div className="Contact LayoutElement">
-        <button onClick={() => context.scrollToArea("/")} className="BackButton ContactBackButton">Zurück</button>
+        <button onClick={() => context.scrollToArea("")} className="BackButton ContactBackButton">Zurück</button>
         <div className="ContactPageContent">
             <h1 className="ContactTitle">Kontakt</h1>
             <form className="ContactForm">

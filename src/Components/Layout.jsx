@@ -26,7 +26,7 @@ export default function Layout() {
             var obj = {left: window.innerWidth, top: window.innerHeight - 40, behavior: "smooth"}
         }
         container.scroll(obj)
-        if (name === "/") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
+        if (name === "") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
             setTimeout(() => navigate(name), 300)
         } else {
             navigate(name)
