@@ -50,7 +50,7 @@
             "name": "C# Wetter App",
             "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
             "technologies": ["C#", "WPF"],
-            "imgs": ["img/WeatherApp1.png"],
+            "imgs": ["img/WeatherApp1.png", "img/Test1.png"],
             "button1": {
                 "name": "Herunterladen",
                 "link": "https://github.com/PatrikAckermann/WPFWeatherApp/releases/download/1.0/Weather.App.1_0.zip"

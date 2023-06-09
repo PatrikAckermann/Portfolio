@@ -11,13 +11,11 @@ export default function Project(props) {
     var images = []
     var technologies = []
 
-    console.log(params)
-
     if (project.imgs !== undefined) {
         images = project.imgs.map(img => {
             var image = img.startsWith("http") ? img : require("./" + img)
             if (img.endsWith("mp4")) {
-                return <div className="ProjectImgContainer" key={img}><video autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
+                return <div className="ProjectImgContainer" key={img}><video loop autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
             }
             return <div className="ProjectImgContainer" key={img}><img src={image} alt="Bild konnte nicht geladen werden."/></div>
         })

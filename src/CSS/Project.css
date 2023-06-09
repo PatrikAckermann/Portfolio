@@ -77,7 +77,8 @@
 }
 
 .ProjectImgContainer {
-    width: inherit;
+    min-width: calc(50vw - 100px);
+    min-height: calc(100vh - 220px);
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
@@ -85,6 +86,7 @@
 }
 
 .ProjectImgContainer > img, .ProjectImgContainer > video {
-    width: calc(50vw - 120px);
-    padding: 10px;
+    max-width: calc(50vw - 120px);
+    max-height: calc(100vh - 240px);
+    padding: 20px;
 }
