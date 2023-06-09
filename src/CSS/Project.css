@@ -20,6 +20,8 @@
 .ProjectFlexLeft {
     margin: 30px;
     width: calc(50vw - 60px);
+    display: flex;
+    flex-direction: column;
 }
 
 .ProjectDescriptionTitle {
@@ -29,6 +31,7 @@
 .ProjectDescription {
     font-size: 20px;
     white-space: pre-line;
+    margin-bottom: 20px;
 }
 
 .ProjectTechnologies {
@@ -42,6 +45,7 @@
 
 .ProjectButtonsDiv {
     display: flex;
+    margin-top: auto;
     flex-direction: row;
 }
 
@@ -88,5 +92,6 @@
 .ProjectImgContainer > img, .ProjectImgContainer > video {
     max-width: calc(50vw - 120px);
     max-height: calc(100vh - 240px);
-    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
 }

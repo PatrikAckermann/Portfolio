@@ -2,33 +2,27 @@
     "languages": {
         "csharp": {
             "name": "C#",
-            "description": "Description",
+            "description": "Mit C# habe ich bereits sowohl Desktop als auch Backend Programme geschrieben\n\nDie Wetter App ist mein grösstes Desktop Projekt. Sie lädt über eine API die Daten herunter und zeigt diese dann über ein WPF GUI an.\n\nMit ASP.NET habe ich einige APIs entwickelt, welche jedoch nur zu Übungszwecken dienten und daher kein Frontend haben. Eine dieser APIs ist ein Inventarsystem. Die API greift über das Entity Framework auf eine Datenbank zu, um dort das Inventar zu lesen und zu bearbeiten.",
             "projects": ["weatherApp"],
             "skills": ["Entity Framework Core", "WPF", "ASP.NET APIs"]
         },
         "python": {
             "name": "Python",
-            "description": "Description",
-            "projects": ["chatApp", "minesweeper"],
+            "description": "Für eine lange Zeit habe ich mich mit Python beschäftigt.\n\nDas grösste Python Projekt, welches ich bisher programmiert habe, ist die Chat App. Diese verwendet einige kompliziertere Technologien und Bibliotheken.\nUm die Kommunikation in der Chat App zu ermöglichen, habe ich Sockets verwendet.\nDamit die Nachrichten auch irgendwo gespeichert werden und um Accounts anlegen zu können, habe ich mit SQLite mehrere Datenbanken erstellt. Sowohl auf dem Server als auch auf dem Client.\n\nBevor ich die Wetter App in C# geschrieben habe, habe ich auch eine in Python erstellt. Diese lädt die Daten über die selbe API herunter wie die C# Version und zeigt das ganze dann in einem Tkinter GUI an.\n\nTkinter kam auch davor schon zum Einsatz. Neben einigen Übungsprojekten habe ich diese Bibliothek auch für das Minesweeper verwendet.",
+            "projects": ["chatApp", "pyWeatherApp", "minesweeper"],
             "skills": ["SQLite", "Sockets", "Tkinter"]
         },
-        "html": {
-            "name": "HTML",
-            "description": "Description",
-            "projects": [],
-            "skills": []
-        },
-        "css": {
-            "name": "CSS",
-            "description": "Description",
-            "projects": [],
-            "skills": []
-        },
         "js": {
-            "name": "Javascript",
-            "description": "Alle Webseiten, welche ich bereits programmiert habe, sind unter anderem in JavaScript geschrieben. Dies tue ich vorallem mit React und vielen weiteren kleineren Bibliotheken.\n\nDer Poster Generator ist eine Webseite, die grösstenteils in Javascript mit React geschrieben ist. In diesem Projekt konnte ich viel über die Sprache lernen. Weitere kleinere Projekte die ich mit React gemacht habe sind der CanvasEditor und einige Übungsseiten. Auch dieses Portfolio wurde mit React & React Router programmiert.\n\nMit dem CSV Parser habe ich erste Erfahrungen im NPM Pakete erstellen und veröffentlichen gemacht.\n\nWenige Projekte von mir sind auch in purem Javascript, ohne Bibliotheken, geschrieben. Eines davon ist die ToDoList Webseite.",
+            "name": "Javascript (+ HTML/CSS)",
+            "description": "Alle Webseiten, welche ich bereits programmiert habe, sind unter anderem in JavaScript geschrieben. Dies tue ich vorallem mit React und vielen weiteren kleineren Bibliotheken.\n\nDer Poster Generator ist eine Webseite, die grösstenteils in Javascript mit React geschrieben ist. In diesem Projekt konnte ich viel über die Sprache lernen. Weitere kleinere Projekte die ich mit React gemacht habe sind der CanvasEditor und einige Übungsseiten. Auch dieses Portfolio wurde mit React & React Router programmiert.\n\nMit dem CSV Parser habe ich erste Erfahrungen im NPM Pakete erstellen und veröffentlichen gemacht.\n\nWenige Projekte von mir sind auch in purem Javascript, ohne Bibliotheken, geschrieben. Eines davon ist die ToDoList Webseite.\n\nFast alle meiner Javascript Projekte enthalten auch CSS. Ich kann Webseiten bis zum komplexitätsgrad dieser Portfolioseite designen. Auch mit Hilfe von Wireframes von einer anderen Person kann ich eine Webseite mit CSS programmieren.",
             "projects": ["posterGenerator", "csvParser"],
             "skills": ["NPM", "React", "React Router"]
+        },
+        "sql": {
+            "name": "SQL",
+            "description": "Ich habe Datenbanken in C# mit dem Entity Framework Core und in Python mit SQLite programmiert. Auch mit Hilfe des Microsoft SQL Server Management Studio konnte ich schon Datenbanken erstellen.\n\nMit SQLite habe ich mehrere Datenbanken für meine Chat App geschrieben. Sowohl auf dem Client als auch auf dem Server habe ich eine Datenbank zum Speichern der Chats programmiert. Für jeden Chat zwischen 2 Personen wird eine eigene Tabelle erstellt. Auf dem Server wird SQLite auch für die Accounts verwendet. Die Passwörter werden für das Speichern in dieser Datenbank verschlüsselt.\n\nFür ein Übungsprojekt habe ich eine Inventar API mit Datenbank in C# und dem Entity Framework entwickelt. Diese Datenbank enthält verschiedene Tabellen für Gegenstände im Inventar, Standorte, Benutzer und mehr. Diese sind über Foreign Keys verknüpft.",
+            "projects": ["chatApp"],
+            "skills": ["Entity Framework Core (C#)", "SQLite", "Microsoft SQL Server Management Studio"]
         }
     },
     "projects": {
@@ -50,7 +44,7 @@
             "name": "C# Wetter App",
             "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
             "technologies": ["C#", "WPF"],
-            "imgs": ["img/WeatherApp1.png", "img/Test1.png"],
+            "imgs": ["img/WeatherApp1.png"],
             "button1": {
                 "name": "Herunterladen",
                 "link": "https://github.com/PatrikAckermann/WPFWeatherApp/releases/download/1.0/Weather.App.1_0.zip"
@@ -58,6 +52,20 @@
             "button2": {
                 "name": "Auf GitHub ansehen",
                 "link": "https://github.com/PatrikAckermann/WPFWeatherApp"
+            }
+        },
+        "pyWeatherApp": {
+            "name": "Python Wetter App",
+            "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
+            "technologies": ["Python", "Tkinter"],
+            "imgs": ["img/PyWeatherApp1.png", "img/PyWeatherApp2.png"],
+            "button1": {
+                "name": "Herunterladen",
+                "link": "https://github.com/PatrikAckermann/PythonWeatherApp/archive/refs/heads/main.zip"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/PythonWeatherApp"
             }
         },
         "posterGenerator": {
@@ -86,6 +94,34 @@
             "button2": {
                 "name": "Auf GitHub ansehen",
                 "link": "https://github.com/PatrikAckermann/csvparse"
+            }
+        },
+        "minesweeper": {
+            "name": "Minesweeper",
+            "description": "Ein klassisches Minesweeper. Es wurde in Python mit der GUI Bibliothek 'Tkinter' programmiert. \n\nMit einem simplen Algorithmus wird bei einem Klick das Feld aufgedeckt und die Zahlen ausgerechnet.",
+            "technologies": ["Python", "Tkinter"],
+            "imgs": ["img/Minesweeper1.png", "img/Minesweeper2.png"],
+            "button1": {
+                "name": "Herunterladen",
+                "link": "https://github.com/PatrikAckermann/Minesweeper/archive/refs/heads/main.zip"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/Minesweeper"
+            }
+        },
+        "todoList": {
+            "name": "Todo-Listen",
+            "description": "Mit der Todo-Listen Webseite kann man Listen erstellen, mit Dingen die noch zu erledigen sind. Die 'Todos' können als erledigt markiert werden.\n\nDie Webseite ist in purem Javascript, ohne Libraries, geschrieben. Mittlerweile würde ich diese Webseite in React erstellen.\n\nDie Daten werden in den Cookies gespeichert, damit sie nicht verloren gehen.",
+            "technologies": ["HTML", "CSS", "Javascript"],
+            "imgs": ["img/TodoList1.png"],
+            "button1": {
+                "name": "Webseite öffnen",
+                "link": "https://patrikackermann.github.io/ToDoList/www/index.html"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/ToDoList"
             }
         }
     }

@@ -67,11 +67,11 @@ export default function Project(props) {
                     </div>}
                 </div>
                 <div className="ProjectFlexRight">
-                    <button onClick={scrollImagesLeft}>{"<"}</button>
+                    {images.length > 1 && <button onClick={scrollImagesLeft}>{"<"}</button>}
                     <div className="ProjectImgsContainer" id="ProjectImgsContainer">
                         {images}
                     </div>
-                    <button onClick={scrollImagesRight}>{">"}</button>
+                    {images.length > 1 && <button onClick={scrollImagesRight}>{">"}</button>}
                 </div>
             </div>
         </div>
