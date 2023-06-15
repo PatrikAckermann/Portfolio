@@ -35,7 +35,7 @@ export default function Home(props) {
     <div className="Home LayoutElement">
         <div className="HomeTitleSection">
             <h1 className="HomeTitle" onClick={() => changePage("about")}>Patrik Ackermann</h1>
-            <h2 className="HomeSubtitle">Irgend ein Untertitel, keine Ahnung</h2>
+            <h2 className="HomeSubtitle">The best developer in the entire universe (pls hire me google)</h2>
         </div>
         <div className="HomeSelectionContainer">
             <div className="HomeSelection">
@@ -53,8 +53,4 @@ export default function Home(props) {
         </div>
         <button className="HomeContactButton" onClick={() => props.scrollToArea("contact")}>Kontakt</button>
     </div>)
-}
-
-function listButton(props) {
-    return (<li onClick={onClick}>{props.Text}</li>)
 }

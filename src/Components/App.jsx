@@ -1,4 +1,4 @@
-import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
+import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route, useNavigate} from "react-router-dom"
 import "../CSS/index.css"
 import Layout, {loader as Dataloader} from "./Layout"
 import Home from "./Home"
@@ -8,13 +8,8 @@ import Welcome from "./Welcome"
 import Contact from "./Contact"
 import AboutMe from "./AboutMe"
 
-export var route = "/"
-if (window.location.hostname === "patrikackermann.github.io") { // This is required on pages that have a path before the react router base path. For example on GitHub pages
-  route = "/portfolio/"
-}
-
 var router = createBrowserRouter(createRoutesFromElements(
-    <Route path={route} element={<Layout/>} loader={Dataloader}>
+    <Route path="/" element={<Layout/>} loader={Dataloader}>
         <Route index element={<Welcome/>}/>
         <Route path="projects" element={<Project/>}>
             <Route path=":project"/>
