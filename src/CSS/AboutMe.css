@@ -1,0 +1,54 @@
+.AboutFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.AboutTitle {
+    text-align: center;
+    font-size: 72px;
+}
+
+.CardTitle {
+    font-size: 32px;
+}
+
+.CardText {
+    font-size: 20px;
+}
+
+.AboutFlexLeft {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 20vw);
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: auto;
+}
+
+.Card {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    user-select: none;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0,.87,1,.13) ease-in-out;
+}
+
+.SelectedCard {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.CardImgs:hover {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.CardImgs > * {
+    background-color:transparent;
+}
+
+.AboutFlexRight {
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0,.87,1,.13) ease-in-out;
+}

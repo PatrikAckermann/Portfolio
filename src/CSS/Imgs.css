@@ -1,0 +1,38 @@
+.Imgs {
+    display: flex;
+    flex-direction: row;
+}
+
+.Imgs > button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0,.87,1,.13) ease-in-out;
+}
+
+.ImgsContainer {
+    width: calc(50vw - 100px);
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.ImgContainer {
+    min-width: calc(50vw - 100px);
+    min-height: calc(100vh - 220px);
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgContainer > img, .ImgContainer > video {
+    max-width: calc(50vw - 120px);
+    max-height: calc(100vh - 240px);
+    margin: 20px;
+    border-radius: 20px;
+}

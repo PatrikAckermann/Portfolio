@@ -44,7 +44,7 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea}}/> : <Empty/>}
+            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/> : <Empty/>}
             <Empty/>
             <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/>
             <Home loaderData={loaderData} scrollToArea={scrollToArea}/>

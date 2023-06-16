@@ -17,9 +17,7 @@ var router = createBrowserRouter(createRoutesFromElements(
         <Route path="languages" element={<Language/>}>
             <Route path=":language"/>
         </Route>
-        <Route path="about" element={<AboutMe/>}>
-            <Route path=":topic"/>
-        </Route>
+        <Route path="about" element={<AboutMe/>}/>
         <Route path="contact" element={<Contact/>}/>
     </Route>
 ))

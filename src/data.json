@@ -124,5 +124,27 @@
                 "link": "https://github.com/PatrikAckermann/ToDoList"
             }
         }
-    }
+    },
+    "about": [
+        {
+            "name": "Test 1",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgs": ["img/placeholder5000x5000.png", "img/placeholder5000x5000.png"]
+        },
+        {
+            "name": "Test 2",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgs": []
+        },
+        {  
+            "name": "Test 3",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgs": ["img/placeholder5000x5000.png"]
+        },
+        {
+            "name": "Test 4",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgs": ["img/placeholder5000x5000.png"]
+        }
+    ]
 }
