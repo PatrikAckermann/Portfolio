@@ -40,11 +40,11 @@ export default function Imgs(props) {
 
     return (
         <div className="Imgs">
-            <button tabIndex="0" onClick={scrollImagesLeft} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{"<"}</button>
+            <button tabIndex={images.length > 1 ? "0" : "-1"} onClick={scrollImagesLeft} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{"<"}</button>
             <div className="ImgsContainer" id="ImgsContainer">
                 {images}
             </div>
-            <button tabIndex="0" onClick={scrollImagesRight} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{">"}</button>
+            <button tabIndex={images.length > 1 ? "0" : "-1"} onClick={scrollImagesRight} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{">"}</button>
         </div>
     )
 }

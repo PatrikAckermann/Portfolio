@@ -8,7 +8,8 @@ export default function AboutMe(props) {
     var cards = []
     var [imgs, setImgs] = React.useState([])
     var [imgsHidden, setImgsHidden] = React.useState(true)
-    var [selectedCard, setSelectedCard] = React.useState(-1);
+    var [selectedCard, setSelectedCard] = React.useState(-1)
+    var strings = context.strings
     
     var cardId = -1
     if (context.data !== undefined) {
@@ -31,8 +32,8 @@ export default function AboutMe(props) {
     }
     
     return (<div className="AboutMe LayoutElement">
-        <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
-        <h1 className="AboutTitle">Über mich</h1>
+        <button onClick={() => context.scrollToArea("")} className="BackButton">{strings.back}</button>
+        <h1 className="AboutTitle">{strings.about}</h1>
         <div className="AboutFlex">
             <div className="AboutFlexLeft">
                 {cards}

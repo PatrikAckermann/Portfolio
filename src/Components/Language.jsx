@@ -5,6 +5,7 @@ export default function Language() {
     var context = useOutletContext()
     var params = useParams()
     var language = context.data.languages[params.language]
+    var strings = context.strings
 
     var projects = []
     var skills = []
@@ -27,11 +28,11 @@ export default function Language() {
                         <p className="LanguageDescription">{language.description}</p>
                     </div>
                     <div className="LanguageFlexRight">
-                        <h2 className="LanguageProjectsTitle LanguageFlexRightTitle">Projekte</h2>
+                        <h2 className="LanguageProjectsTitle LanguageFlexRightTitle">{strings.projects}</h2>
                         <ul>
                             {projects}
                         </ul>
-                        <h2 className="LanguageSkillsTitle LanguageFlexRightTitle">Skills</h2>
+                        <h2 className="LanguageSkillsTitle LanguageFlexRightTitle">{strings.skills}</h2>
                         <ul>    
                             {skills}
                         </ul>

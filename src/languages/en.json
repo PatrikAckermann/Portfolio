@@ -1,3 +1,27 @@
 {
-    
+    "back": "Go back",
+    "openPortfolio": "Open Portfolio",
+    "subtitle": "ABCDEF",
+    "programmingLanguages": "Programming Languages",
+    "projects": "Projects",
+    "contact": "Contact",
+
+    "ABOUT PAGE": "",
+    "about": "About me",
+
+    "LANGUAGE PAGE": "",
+    "skills": "Skills",
+
+    "PROJECT PAGE": "",
+    "description": "Description",
+    "technologies": "Technologies",
+    "openPage": "Open Website",
+    "seeOnGithub": "See on GitHub",
+    "download": "Download",
+    "seeOnNPM": "See on NPM",
+
+    "CONTACT PAGE": "",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMail": "Send E-Mail"
 }

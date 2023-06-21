@@ -11,7 +11,23 @@ export default function Layout() {
     var data = loaderData[0]
     var german = loaderData[1]
     var english = loaderData[2]
-    var [language, setLanguage] = React.useState(german)
+
+    var [language, setLanguage] = React.useState(localStorage.getItem("language"))
+    if (language === null) {setLanguage("de"); localStorage.setItem("language", "de")}
+
+    var strings
+    switch(language) {
+        case "de":
+            strings = loaderData[1]
+            break;
+        case "en":
+            strings = loaderData[2]
+            break;
+        default:
+            strings = loaderData[2]
+            break;
+    }
+
     var navigate = useNavigate()
     var location = useLocation()
 
@@ -48,13 +64,13 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: data}}/> : <Empty/>}
+            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea, data: data}}/>
-            <Home loaderData={data} scrollToArea={scrollToArea}/>
-            {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: data}}/> : <Empty/>}
+            <Outlet context={{scrollToArea: scrollToArea, data: data, language: language, setLanguage: setLanguage, strings: strings}}/>
+            <Home loaderData={data} scrollToArea={scrollToArea} strings={strings}/>
+            {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
             <Empty/>
-            {location.pathname.startsWith("/contact") ? <Outlet context={{scrollToArea: scrollToArea}}/> : <Empty/>}
+            {location.pathname.startsWith("/contact") ? <Outlet context={{scrollToArea: scrollToArea, strings: strings}}/> : <Empty/>}
             <Empty/>
         </div>
         <Footer />

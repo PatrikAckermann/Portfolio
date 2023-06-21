@@ -7,6 +7,7 @@ export default function Project(props) {
     var context = useOutletContext()
     var params = useParams()
     var project = context.data.projects[params.project]
+    var strings = context.strings
 
     var images = project.imgs
     var technologies = []
@@ -23,15 +24,15 @@ export default function Project(props) {
             <h1 className="ProjectTitle">{project.name}</h1>
             <div className="ProjectFlexContainer">
                 <div className="ProjectFlexLeft">
-                    <a className="ProjectDescriptionTitle">Beschreibung</a><br/>
+                    <a className="ProjectDescriptionTitle">{strings.description}</a><br/>
                     <a className="ProjectDescription">{project.description}</a>
-                    <br/><br/><a className="ProjectDescriptionTitle">Technologien</a><br/>
+                    <br/><br/><a className="ProjectDescriptionTitle">{strings.technologies}</a><br/>
                     <ul className="ProjectTechnologies">
                         {technologies}
                     </ul>
                     {project.button1 !== undefined && <div className="ProjectButtonsDiv">
-                        <button tabIndex="0" id="button1" onClick={() => window.open(project.button1.link)}>{project.button1.name}</button>
-                        <button tabIndex="0" id="button2" onClick={() => window.open(project.button2.link)}>{project.button2.name}</button>
+                        <button tabIndex="0" id="button1" onClick={() => window.open(project.button1.link)}>{strings[project.button1.name]}</button>
+                        <button tabIndex="0" id="button2" onClick={() => window.open(project.button2.link)}>{strings[project.button2.name]}</button>
                     </div>}
                 </div>
                 <div className="ProjectFlexRight">

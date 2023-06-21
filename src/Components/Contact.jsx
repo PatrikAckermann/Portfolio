@@ -6,6 +6,7 @@ import mailtoLink from "mailto-link"
 export default function Welcome(props) {
     var context = useOutletContext()
     var [formData, setFormData] = React.useState({subject: "", message: ""})
+    var strings = context.strings
 
     function sendMail(e) {
         e.preventDefault()
@@ -19,15 +20,15 @@ export default function Welcome(props) {
     }
 
     return (<div className="Contact LayoutElement">
-        <button onClick={() => context.scrollToArea("")} className="BackButton ContactBackButton">Zurück</button>
+        <button onClick={() => context.scrollToArea("")} className="BackButton ContactBackButton">{strings.back}</button>
         <div className="ContactPageContent">
-            <h1 className="ContactTitle">Kontakt</h1>
+            <h1 className="ContactTitle">{strings.contact}</h1>
             <form className="ContactForm">
-                <label>Betreff</label>
+                <label>{strings.subject}</label>
                 <input tabIndex="0" type="text" id="subject" name="subject" onChange={handleChange} value={formData.subject}/>
-                <label>Nachricht</label>
+                <label>{strings.message}</label>
                 <textarea tabIndex="0" type="text" id="message" name="message" onChange={handleChange} value={formData.message}/>
-                <button tabIndex="0" onClick={sendMail}>E-Mail Senden</button>
+                <button tabIndex="0" onClick={sendMail}>{strings.sendMail}</button>
             </form>
         </div>
     </div>)

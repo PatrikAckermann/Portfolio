@@ -7,6 +7,7 @@ export default function Home(props) {
     var location = useLocation()
     var languageListItems = []
     var projectListItems = []
+    var strings = props.strings
 
     var tabIndex = location.pathname === "/" ? "0" : "-1"
 
@@ -38,17 +39,17 @@ export default function Home(props) {
     <div className="Home LayoutElement">
         <div className="HomeTitleSection">
             <h1 tabIndex={tabIndex} className="HomeTitle Hover" onClick={() => changePage("about")}>Patrik Ackermann</h1>
-            <h2 className="HomeSubtitle">The best developer in the entire universe (pls hire me google)</h2>
+            <h2 className="HomeSubtitle">{strings.subtitle}</h2>
         </div>
         <div className="HomeSelectionContainer">
             <div className="HomeSelection">
-                <h3>Programmiersprachen</h3>
+                <h3>{strings.programmingLanguages}</h3>
                 <ul>
                     {languageListItems}
                 </ul>
             </div>
             <div className="HomeSelection">
-                <h3>Projekte</h3>
+                <h3>{strings.projects}</h3>
                 <ul>
                     {projectListItems}
                 </ul>
@@ -56,7 +57,7 @@ export default function Home(props) {
         </div>
         <div className="HomeButtons">
             <button tabIndex={tabIndex} className="HomeButton" onClick={() => window.open("https://github.com/PatrikAckermann")}>GitHub</button>
-            <button tabIndex={tabIndex} className="HomeButton" onClick={() => props.scrollToArea("contact")}>Kontakt</button>
+            <button tabIndex={tabIndex} className="HomeButton" onClick={() => props.scrollToArea("contact")}>{strings.contact}</button>
             <button tabIndex={tabIndex} className="HomeButton">Button</button>
         </div>
     </div>)

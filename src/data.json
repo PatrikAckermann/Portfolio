@@ -32,11 +32,11 @@
             "technologies": ["JavaScript", "HTML", "CSS", "React"],
             "imgs": ["img/PosterGenerator1.png", "https://user-images.githubusercontent.com/87939030/235651684-cf7f1b00-3553-4293-88e7-b0398edfbcb0.mp4", "https://user-images.githubusercontent.com/87939030/237988063-045a1502-3b4f-4aa5-9a4f-3d58c4982dd0.mp4"],
             "button1": {
-                "name": "Webseite öffnen",
+                "name": "openPage",
                 "link": "https://patrikackermann.github.io/poster-generator"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/poster-generator"
             }
         },
@@ -46,11 +46,11 @@
             "technologies": ["Python", "SQLite", "Sockets", "Tkinter"],
             "imgs": ["img/ChatApp1.png", "img/ChatApp2.png"],
             "button1": {
-                "name": "Herunterladen",
+                "name": "download",
                 "link": "https://github.com/PatrikAckermann/ChatApp/archive/refs/heads/main.zip"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/ChatApp"
             }
         },
@@ -60,11 +60,11 @@
             "technologies": ["C#", "WPF"],
             "imgs": ["img/WeatherApp1.png"],
             "button1": {
-                "name": "Herunterladen",
+                "name": "download",
                 "link": "https://github.com/PatrikAckermann/WPFWeatherApp/releases/download/1.0/Weather.App.1_0.zip"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/WPFWeatherApp"
             }
         },
@@ -74,11 +74,11 @@
             "technologies": ["Python", "Tkinter"],
             "imgs": ["img/PyWeatherApp1.png", "img/PyWeatherApp2.png"],
             "button1": {
-                "name": "Herunterladen",
+                "name": "download",
                 "link": "https://github.com/PatrikAckermann/PythonWeatherApp/archive/refs/heads/main.zip"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/PythonWeatherApp"
             }
         },
@@ -88,11 +88,11 @@
             "technologies": ["Javascript", "NPM", "lodash"],
             "imgs": ["img/CSVParse1.png", "img/CSVParse2.png"],
             "button1": {
-                "name": "Auf NPM ansehen",
+                "name": "seeOnNPM",
                 "link": "https://www.npmjs.com/package/parse-csv-to-obj"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/csvparse"
             }
         },
@@ -102,11 +102,11 @@
             "technologies": ["Python", "Tkinter"],
             "imgs": ["img/Minesweeper1.png", "img/Minesweeper2.png"],
             "button1": {
-                "name": "Herunterladen",
+                "name": "download",
                 "link": "https://github.com/PatrikAckermann/Minesweeper/archive/refs/heads/main.zip"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/Minesweeper"
             }
         },
@@ -116,11 +116,11 @@
             "technologies": ["HTML", "CSS", "Javascript"],
             "imgs": ["img/TodoList1.png"],
             "button1": {
-                "name": "Webseite öffnen",
+                "name": "openPage",
                 "link": "https://patrikackermann.github.io/ToDoList/www/index.html"
             },
             "button2": {
-                "name": "Auf GitHub ansehen",
+                "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/ToDoList"
             }
         }
