@@ -1,11 +1,14 @@
 import "../CSS/Home.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 
 export default function Home(props) {
     var loaderData = props.loaderData
     var navigate = useNavigate()
+    var location = useLocation()
     var languageListItems = []
     var projectListItems = []
+
+    var tabIndex = location.pathname === "/" ? "0" : "-1"
 
     if(loaderData === undefined) {
         return <div className="Home LayoutElement"></div>
@@ -20,7 +23,7 @@ export default function Home(props) {
         languageListItems.push({key: key, ...loaderData.languages[key]})
     }
     languageListItems = languageListItems.map(item => {
-        return <li key={item.key} onClick={() => changePage("languages/" + item.key, item.key)}>{item.name}</li>
+        return <li key={item.key} className="Hover" tabIndex={tabIndex} onClick={() => changePage("languages/" + item.key, item.key)}>{item.name}</li>
     })
 
     // Load projects
@@ -28,13 +31,13 @@ export default function Home(props) {
         projectListItems.push({key: key, ...loaderData.projects[key]})
     }
     projectListItems = projectListItems.map(item => {
-        return <li key={item.key} onClick={() => changePage("projects/" + item.key, item.key)}>{item.name}</li>
+        return <li tabIndex={tabIndex} className="Hover" key={item.key} onClick={() => changePage("projects/" + item.key, item.key)}>{item.name}</li>
     })
 
     return (
     <div className="Home LayoutElement">
         <div className="HomeTitleSection">
-            <h1 className="HomeTitle" onClick={() => changePage("about")}>Patrik Ackermann</h1>
+            <h1 tabIndex={tabIndex} className="HomeTitle Hover" onClick={() => changePage("about")}>Patrik Ackermann</h1>
             <h2 className="HomeSubtitle">The best developer in the entire universe (pls hire me google)</h2>
         </div>
         <div className="HomeSelectionContainer">
@@ -51,6 +54,10 @@ export default function Home(props) {
                 </ul>
             </div>
         </div>
-        <button className="HomeContactButton" onClick={() => props.scrollToArea("contact")}>Kontakt</button>
+        <div className="HomeButtons">
+            <button tabIndex={tabIndex} className="HomeButton" onClick={() => window.open("https://github.com/PatrikAckermann")}>GitHub</button>
+            <button tabIndex={tabIndex} className="HomeButton" onClick={() => props.scrollToArea("contact")}>Kontakt</button>
+            <button tabIndex={tabIndex} className="HomeButton">Button</button>
+        </div>
     </div>)
 }

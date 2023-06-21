@@ -40,6 +40,9 @@
 
 .LanguageListItem {
     font-size: 20px;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    transition-duration: 0.5s;
 }
 
 .Pointer {

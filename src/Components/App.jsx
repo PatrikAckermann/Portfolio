@@ -1,4 +1,4 @@
-import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route, useNavigate} from "react-router-dom"
+import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
 import "../CSS/index.css"
 import Layout, {loader as Dataloader} from "./Layout"
 import Home from "./Home"

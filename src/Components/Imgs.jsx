@@ -4,13 +4,15 @@ export default function Imgs(props) {
     var images = []
     var currentImg = 0
 
+    var count = 0
     if (props.imgs !== undefined) {
         images = props.imgs.map(img => {
+            count += 1
             var image = img.startsWith("http") ? img : require("./" + img)
             if (img.endsWith("mp4")) {
-                return <div className="ImgContainer" key={img}><video loop autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
+                return <div className="ImgContainer" key={count}><video loop autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
             }
-            return <div className="ImgContainer" key={img}><img src={image} alt="Bild konnte nicht geladen werden."/></div>
+            return <div className="ImgContainer" key={count}><img src={image} alt="Bild konnte nicht geladen werden."/></div>
         })
     }
 
@@ -38,11 +40,11 @@ export default function Imgs(props) {
 
     return (
         <div className="Imgs">
-            <button onClick={scrollImagesLeft} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{"<"}</button>
+            <button tabIndex="0" onClick={scrollImagesLeft} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{"<"}</button>
             <div className="ImgsContainer" id="ImgsContainer">
                 {images}
             </div>
-            <button onClick={scrollImagesRight} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{">"}</button>
+            <button tabIndex="0" onClick={scrollImagesRight} style={images.length > 1 ? {width: "40px"} : {width: "0px"}}>{">"}</button>
         </div>
     )
 }

@@ -8,6 +8,10 @@ import React from "react"
 
 export default function Layout() {
     var loaderData = useLoaderData()
+    var data = loaderData[0]
+    var german = loaderData[1]
+    var english = loaderData[2]
+    var [language, setLanguage] = React.useState(german)
     var navigate = useNavigate()
     var location = useLocation()
 
@@ -44,11 +48,11 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/> : <Empty/>}
+            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: data}}/> : <Empty/>}
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/>
-            <Home loaderData={loaderData} scrollToArea={scrollToArea}/>
-            {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: loaderData}}/> : <Empty/>}
+            <Outlet context={{scrollToArea: scrollToArea, data: data}}/>
+            <Home loaderData={data} scrollToArea={scrollToArea}/>
+            {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: data}}/> : <Empty/>}
             <Empty/>
             {location.pathname.startsWith("/contact") ? <Outlet context={{scrollToArea: scrollToArea}}/> : <Empty/>}
             <Empty/>
@@ -58,7 +62,7 @@ export default function Layout() {
 }
 
 export function loader() {
-    return require("../data.json")
+    return [require("../data.json"), require("../languages/de.json"), require("../languages/en.json")]
 }
 
 function Empty() {

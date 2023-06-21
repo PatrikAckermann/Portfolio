@@ -24,10 +24,10 @@ export default function Welcome(props) {
             <h1 className="ContactTitle">Kontakt</h1>
             <form className="ContactForm">
                 <label>Betreff</label>
-                <input type="text" id="subject" name="subject" onChange={handleChange} value={formData.subject}/>
+                <input tabIndex="0" type="text" id="subject" name="subject" onChange={handleChange} value={formData.subject}/>
                 <label>Nachricht</label>
-                <textarea type="text" id="message" name="message" onChange={handleChange} value={formData.message}/>
-                <button onClick={sendMail}>E-Mail Senden</button>
+                <textarea tabIndex="0" type="text" id="message" name="message" onChange={handleChange} value={formData.message}/>
+                <button tabIndex="0" onClick={sendMail}>E-Mail Senden</button>
             </form>
         </div>
     </div>)

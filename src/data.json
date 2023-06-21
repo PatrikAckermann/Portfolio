@@ -22,10 +22,24 @@
             "name": "SQL",
             "description": "Ich habe Datenbanken in C# mit dem Entity Framework Core und in Python mit SQLite programmiert. Auch mit Hilfe des Microsoft SQL Server Management Studio konnte ich schon Datenbanken erstellen.\n\nMit SQLite habe ich mehrere Datenbanken für meine Chat App geschrieben. Sowohl auf dem Client als auch auf dem Server habe ich eine Datenbank zum Speichern der Chats programmiert. Für jeden Chat zwischen 2 Personen wird eine eigene Tabelle erstellt. Auf dem Server wird SQLite auch für die Accounts verwendet. Die Passwörter werden für das Speichern in dieser Datenbank verschlüsselt.\n\nFür ein Übungsprojekt habe ich eine Inventar API mit Datenbank in C# und dem Entity Framework entwickelt. Diese Datenbank enthält verschiedene Tabellen für Gegenstände im Inventar, Standorte, Benutzer und mehr. Diese sind über Foreign Keys verknüpft.",
             "projects": ["chatApp"],
-            "skills": ["Entity Framework Core (C#)", "SQLite", "Microsoft SQL Server Management Studio"]
+            "skills": ["Entity Framework Core", "SQLite", "Microsoft SQL Server Management Studio"]
         }
     },
     "projects": {
+        "posterGenerator": {
+            "name": "Poster Generator",
+            "description": "Im Poster Generator können Poster mit Formen und Text erstellt werden. Die Formen und Texte haben viele Einstellungen wie Grösse, Farbe, Position, Animation und vieles mehr. Das Poster kann als PNG oder als WEBM heruntergeladen werden.",
+            "technologies": ["JavaScript", "HTML", "CSS", "React"],
+            "imgs": ["img/PosterGenerator1.png", "https://user-images.githubusercontent.com/87939030/235651684-cf7f1b00-3553-4293-88e7-b0398edfbcb0.mp4", "https://user-images.githubusercontent.com/87939030/237988063-045a1502-3b4f-4aa5-9a4f-3d58c4982dd0.mp4"],
+            "button1": {
+                "name": "Webseite öffnen",
+                "link": "https://patrikackermann.github.io/poster-generator"
+            },
+            "button2": {
+                "name": "Auf GitHub ansehen",
+                "link": "https://github.com/PatrikAckermann/poster-generator"
+            }
+        },
         "chatApp": {
             "name": "Chat App",
             "description": "Die Chat App lässt dich mit anderen Usern chatten. Mit einem Login, bestehend aus Nutzername und Passwort, meldest du dich an. Danach kannst du andere Nutzer mit ihrem Nutzernamen finden und mit ihnen einen Chat starten. \n\nDie Accounts und Chats werden in einer Serverseitigen Datenbank gespeichert. Der Client hat auch eine Datenbank mit allen Chats die der Benutzer hat.",
@@ -66,20 +80,6 @@
             "button2": {
                 "name": "Auf GitHub ansehen",
                 "link": "https://github.com/PatrikAckermann/PythonWeatherApp"
-            }
-        },
-        "posterGenerator": {
-            "name": "Poster Generator",
-            "description": "Im Poster Generator können Poster mit Formen und Text erstellt werden. Die Formen und Texte haben viele Einstellungen wie Grösse, Farbe, Position, Animation und vieles mehr. Das Poster kann als PNG oder als WEBM heruntergeladen werden.",
-            "technologies": ["JavaScript", "HTML", "CSS", "React"],
-            "imgs": ["img/PosterGenerator1.png", "https://user-images.githubusercontent.com/87939030/235651684-cf7f1b00-3553-4293-88e7-b0398edfbcb0.mp4", "https://user-images.githubusercontent.com/87939030/237988063-045a1502-3b4f-4aa5-9a4f-3d58c4982dd0.mp4"],
-            "button1": {
-                "name": "Webseite öffnen",
-                "link": "https://patrikackermann.github.io/poster-generator"
-            },
-            "button2": {
-                "name": "Auf GitHub ansehen",
-                "link": "https://github.com/PatrikAckermann/poster-generator"
             }
         },
         "csvParser": {

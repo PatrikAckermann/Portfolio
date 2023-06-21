@@ -10,7 +10,7 @@ export default function Language() {
     var skills = []
 
     projects = language.projects.map(project => {
-        return <li key={project} className="LanguageListItem Pointer" onClick={() => context.scrollToArea("projects/" + project)}>{context.data.projects[project].name}</li>
+        return <li tabIndex="0" key={project} className="LanguageListItem Hover" onClick={() => context.scrollToArea("projects/" + project)}>{context.data.projects[project].name}</li>
     })
 
     skills = language.skills.map(skill => {
@@ -19,7 +19,7 @@ export default function Language() {
 
     return (
         <div className="Language LayoutElement">
-            <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
+            <button tabIndex="0" onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
             <div className="LanguagePageContent">
                 <h1 className="LanguageTitle">{language.name}</h1>
                 <div className="LanguageFlexContainer">

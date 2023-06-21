@@ -47,13 +47,13 @@ export default function AboutMe(props) {
 function Card(props) {
     var cardClass = "Card"
     if (props.imgs.length > 0) {
-        cardClass += " CardImgs"
+        cardClass += " CardImgs Hover"
     }
     if (props.id === props.selectedCard) {
         cardClass += " SelectedCard"
     }
 
-    function nothing() {}
+    function nothing() {/* Nothing */}
 
     return (
         <div className={cardClass} onClick={() => props.imgs.length > 0 ? props.setImgs(props.imgs, props.id) : nothing()}>
