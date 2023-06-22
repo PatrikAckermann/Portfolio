@@ -24,7 +24,7 @@ export default function Home(props) {
         languageListItems.push({key: key, ...loaderData.languages[key]})
     }
     languageListItems = languageListItems.map(item => {
-        return <li key={item.key} className="Hover" tabIndex={tabIndex} onClick={() => changePage("languages/" + item.key, item.key)}>{item.name}</li>
+        return <li key={item.key} className="Hover" tabIndex={tabIndex} onClick={() => changePage("languages/" + item.key, item.key)}>{strings[item.name]}</li>
     })
 
     // Load projects
@@ -32,7 +32,7 @@ export default function Home(props) {
         projectListItems.push({key: key, ...loaderData.projects[key]})
     }
     projectListItems = projectListItems.map(item => {
-        return <li tabIndex={tabIndex} className="Hover" key={item.key} onClick={() => changePage("projects/" + item.key, item.key)}>{item.name}</li>
+        return <li tabIndex={tabIndex} className="Hover" key={item.key} onClick={() => changePage("projects/" + item.key, item.key)}>{strings[item.name]}</li>
     })
 
     return (

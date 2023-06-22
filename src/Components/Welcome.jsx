@@ -6,6 +6,7 @@ export default function Welcome(props) {
     var context = useOutletContext()
 
     function setLanguage(language) {
+        if (language === "en") {alert("Warning: This language is not finished yet. Some parts of the site might not contain text.")}
         context.setLanguage(language)
         localStorage.setItem("language", language)
     }

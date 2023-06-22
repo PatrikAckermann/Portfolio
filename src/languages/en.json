@@ -1,7 +1,7 @@
 {
     "back": "Go back",
     "openPortfolio": "Open Portfolio",
-    "subtitle": "ABCDEF",
+    "subtitle": "Application Development Apprentice @ Modern IT Academy (isolutions/gewa)",
     "programmingLanguages": "Programming Languages",
     "projects": "Projects",
     "contact": "Contact",
@@ -23,5 +23,35 @@
     "CONTACT PAGE": "",
     "subject": "Subject",
     "message": "Message",
-    "sendMail": "Send E-Mail"
+    "sendMail": "Send E-Mail",
+
+    "PROJECTS": "",
+    "posterGenTitle": "Poster Generator",
+    "posterGenDescription": "",
+    "chatAppTitle": "Chat App",
+    "chatAppDescription": "",
+    "csWeatherAppTitle": "C# Weather App",
+    "csWeatherAppDescription": "",
+    "pyWeatherAppTitle": "Python Weather App",
+    "pyWeatherAppDescription": "",
+    "csvParserTitle": "JS CSV Parser",
+    "csvParserDescription": "",
+    "minesweeperTitle": "Minesweeper",
+    "minesweeperDescription": "",
+    "todoListsTitle": "Todo Lists",
+    "todoListsDescription": "",
+
+    "LANGUAGES": "",
+    "csName": "C#",
+    "csDescription": "",
+    "pyName": "Python",
+    "pyDescription": "",
+    "jsName": "Javascript (+ HTML/CSS)",
+    "jsDescription": "",
+    "sqlName": "SQL",
+    "sqlDescription": "",
+
+    "ABOUT": "",
+    "testTitle": "Test",
+    "testText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 }

@@ -1,34 +1,34 @@
 {
     "languages": {
         "csharp": {
-            "name": "C#",
-            "description": "Mit C# habe ich bereits sowohl Desktop als auch Backend Programme geschrieben\n\nDie Wetter App ist mein grösstes Desktop Projekt. Sie lädt über eine API die Daten herunter und zeigt diese dann über ein WPF GUI an.\n\nMit ASP.NET habe ich einige APIs entwickelt, welche jedoch nur zu Übungszwecken dienten und daher kein Frontend haben. Eine dieser APIs ist ein Inventarsystem. Die API greift über das Entity Framework auf eine Datenbank zu, um dort das Inventar zu lesen und zu bearbeiten.",
+            "name": "csName",
+            "description": "csDescription",
             "projects": ["weatherApp"],
             "skills": ["Entity Framework Core", "WPF", "ASP.NET APIs"]
         },
         "python": {
-            "name": "Python",
-            "description": "Für eine lange Zeit habe ich mich mit Python beschäftigt.\n\nDas grösste Python Projekt, welches ich bisher programmiert habe, ist die Chat App. Diese verwendet einige kompliziertere Technologien und Bibliotheken.\nUm die Kommunikation in der Chat App zu ermöglichen, habe ich Sockets verwendet.\nDamit die Nachrichten auch irgendwo gespeichert werden und um Accounts anlegen zu können, habe ich mit SQLite mehrere Datenbanken erstellt. Sowohl auf dem Server als auch auf dem Client.\n\nBevor ich die Wetter App in C# geschrieben habe, habe ich auch eine in Python erstellt. Diese lädt die Daten über die selbe API herunter wie die C# Version und zeigt das ganze dann in einem Tkinter GUI an.\n\nTkinter kam auch davor schon zum Einsatz. Neben einigen Übungsprojekten habe ich diese Bibliothek auch für das Minesweeper verwendet.",
+            "name": "pyName",
+            "description": "pyDescription",
             "projects": ["chatApp", "pyWeatherApp", "minesweeper"],
             "skills": ["SQLite", "Sockets", "Tkinter"]
         },
         "js": {
-            "name": "Javascript (+ HTML/CSS)",
-            "description": "Alle Webseiten, welche ich bereits programmiert habe, sind unter anderem in JavaScript geschrieben. Dies tue ich vorallem mit React und vielen weiteren kleineren Bibliotheken.\n\nDer Poster Generator ist eine Webseite, die grösstenteils in Javascript mit React geschrieben ist. In diesem Projekt konnte ich viel über die Sprache lernen. Weitere kleinere Projekte die ich mit React gemacht habe sind der CanvasEditor und einige Übungsseiten. Auch dieses Portfolio wurde mit React & React Router programmiert.\n\nMit dem CSV Parser habe ich erste Erfahrungen im NPM Pakete erstellen und veröffentlichen gemacht.\n\nWenige Projekte von mir sind auch in purem Javascript, ohne Bibliotheken, geschrieben. Eines davon ist die ToDoList Webseite.\n\nFast alle meiner Javascript Projekte enthalten auch CSS. Ich kann Webseiten bis zum komplexitätsgrad dieser Portfolioseite designen. Auch mit Hilfe von Wireframes von einer anderen Person kann ich eine Webseite mit CSS programmieren.",
+            "name": "jsName",
+            "description": "jsDescription",
             "projects": ["posterGenerator", "csvParser"],
             "skills": ["NPM", "React", "React Router"]
         },
         "sql": {
-            "name": "SQL",
-            "description": "Ich habe Datenbanken in C# mit dem Entity Framework Core und in Python mit SQLite programmiert. Auch mit Hilfe des Microsoft SQL Server Management Studio konnte ich schon Datenbanken erstellen.\n\nMit SQLite habe ich mehrere Datenbanken für meine Chat App geschrieben. Sowohl auf dem Client als auch auf dem Server habe ich eine Datenbank zum Speichern der Chats programmiert. Für jeden Chat zwischen 2 Personen wird eine eigene Tabelle erstellt. Auf dem Server wird SQLite auch für die Accounts verwendet. Die Passwörter werden für das Speichern in dieser Datenbank verschlüsselt.\n\nFür ein Übungsprojekt habe ich eine Inventar API mit Datenbank in C# und dem Entity Framework entwickelt. Diese Datenbank enthält verschiedene Tabellen für Gegenstände im Inventar, Standorte, Benutzer und mehr. Diese sind über Foreign Keys verknüpft.",
+            "name": "sqlName",
+            "description": "sqlDescription",
             "projects": ["chatApp"],
             "skills": ["Entity Framework Core", "SQLite", "Microsoft SQL Server Management Studio"]
         }
     },
     "projects": {
         "posterGenerator": {
-            "name": "Poster Generator",
-            "description": "Im Poster Generator können Poster mit Formen und Text erstellt werden. Die Formen und Texte haben viele Einstellungen wie Grösse, Farbe, Position, Animation und vieles mehr. Das Poster kann als PNG oder als WEBM heruntergeladen werden.",
+            "name": "posterGenTitle",
+            "description": "posterGenDescription",
             "technologies": ["JavaScript", "HTML", "CSS", "React"],
             "imgs": ["img/PosterGenerator1.png", "https://user-images.githubusercontent.com/87939030/235651684-cf7f1b00-3553-4293-88e7-b0398edfbcb0.mp4", "https://user-images.githubusercontent.com/87939030/237988063-045a1502-3b4f-4aa5-9a4f-3d58c4982dd0.mp4"],
             "button1": {
@@ -41,8 +41,8 @@
             }
         },
         "chatApp": {
-            "name": "Chat App",
-            "description": "Die Chat App lässt dich mit anderen Usern chatten. Mit einem Login, bestehend aus Nutzername und Passwort, meldest du dich an. Danach kannst du andere Nutzer mit ihrem Nutzernamen finden und mit ihnen einen Chat starten. \n\nDie Accounts und Chats werden in einer Serverseitigen Datenbank gespeichert. Der Client hat auch eine Datenbank mit allen Chats die der Benutzer hat.",
+            "name": "chatAppTitle",
+            "description": "chatAppDescription",
             "technologies": ["Python", "SQLite", "Sockets", "Tkinter"],
             "imgs": ["img/ChatApp1.png", "img/ChatApp2.png"],
             "button1": {
@@ -55,8 +55,8 @@
             }
         },
         "weatherApp": {
-            "name": "C# Wetter App",
-            "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
+            "name": "csWeatherAppTitle",
+            "description": "csWeatherAppDescription",
             "technologies": ["C#", "WPF"],
             "imgs": ["img/WeatherApp1.png"],
             "button1": {
@@ -69,8 +69,8 @@
             }
         },
         "pyWeatherApp": {
-            "name": "Python Wetter App",
-            "description": "Mit der Wetter App kann das Wetter eines beliebigen Standortes angezeigt werden. Neben der Temperatur und dem Wetter gibt es auch weitere Infos wie Sonnenauf-/untergang oder die Sichtweite. Ausserdem gibt es eine Wettervorhersage im 3 Stunden Takt. \nIm Standorte Tab kann man mit einer Suche nach einer Stadt suchen. Städte lassen sich auch speichern. \n\nDie Wetterdaten werden von der OpenWeatherMaps API heruntergeladen.",
+            "name": "pyWeatherAppTitle",
+            "description": "pyWeatherAppDescription",
             "technologies": ["Python", "Tkinter"],
             "imgs": ["img/PyWeatherApp1.png", "img/PyWeatherApp2.png"],
             "button1": {
@@ -83,8 +83,8 @@
             }
         },
         "csvParser": {
-            "name": "JS CSV Parser",
-            "description": "Der CSV Parser nimmt mit seiner einzigen Funktion, csvparse(), einen CSV String entgegen und wandelt ihn in ein Javascript Objekt um. Mit den Optionen kann angepasst werden, wie die Datei gelesen wird. Man kann zum Beispiel eine Kategorie erstellen, die dann den Aufbau des Objekts verändert. Man kann auch den Datentyp einer Spalte umwandeln lassen.",
+            "name": "csvParserTitle",
+            "description": "csvParserDescription",
             "technologies": ["Javascript", "NPM", "lodash"],
             "imgs": ["img/CSVParse1.png", "img/CSVParse2.png"],
             "button1": {
@@ -97,8 +97,8 @@
             }
         },
         "minesweeper": {
-            "name": "Minesweeper",
-            "description": "Ein klassisches Minesweeper. Es wurde in Python mit der GUI Bibliothek 'Tkinter' programmiert. \n\nMit einem simplen Algorithmus wird bei einem Klick das Feld aufgedeckt und die Zahlen ausgerechnet.",
+            "name": "minesweeperTitle",
+            "description": "mineSweeperDescription",
             "technologies": ["Python", "Tkinter"],
             "imgs": ["img/Minesweeper1.png", "img/Minesweeper2.png"],
             "button1": {
@@ -111,8 +111,8 @@
             }
         },
         "todoList": {
-            "name": "Todo-Listen",
-            "description": "Mit der Todo-Listen Webseite kann man Listen erstellen, mit Dingen die noch zu erledigen sind. Die 'Todos' können als erledigt markiert werden.\n\nDie Webseite ist in purem Javascript, ohne Libraries, geschrieben. Mittlerweile würde ich diese Webseite in React erstellen.\n\nDie Daten werden in den Cookies gespeichert, damit sie nicht verloren gehen.",
+            "name": "todoListsTitle",
+            "description": "todoListsDescription",
             "technologies": ["HTML", "CSS", "Javascript"],
             "imgs": ["img/TodoList1.png"],
             "button1": {
@@ -127,23 +127,23 @@
     },
     "about": [
         {
-            "name": "Test 1",
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "name": "about1Title",
+            "text": "about1Text",
             "imgs": ["img/placeholder5000x5000.png", "img/placeholder5000x5000.png"]
         },
         {
-            "name": "Test 2",
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "name": "about2Title",
+            "text": "about2Text",
             "imgs": []
         },
         {  
-            "name": "Test 3",
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "name": "about3Title",
+            "text": "about3Text",
             "imgs": ["img/placeholder5000x5000.png"]
         },
         {
-            "name": "Test 4",
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "name": "about4Title",
+            "text": "about4Text",
             "imgs": ["img/placeholder5000x5000.png"]
         }
     ]

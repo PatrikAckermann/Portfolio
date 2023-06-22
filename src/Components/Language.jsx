@@ -22,10 +22,10 @@ export default function Language() {
         <div className="Language LayoutElement">
             <button tabIndex="0" onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
             <div className="LanguagePageContent">
-                <h1 className="LanguageTitle">{language.name}</h1>
+                <h1 className="LanguageTitle">{strings[language.name]}</h1>
                 <div className="LanguageFlexContainer">
                     <div className="LanguageFlexLeft">
-                        <p className="LanguageDescription">{language.description}</p>
+                        <p className="LanguageDescription">{strings[language.description]}</p>
                     </div>
                     <div className="LanguageFlexRight">
                         <h2 className="LanguageProjectsTitle LanguageFlexRightTitle">{strings.projects}</h2>

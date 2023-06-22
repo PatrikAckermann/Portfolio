@@ -21,11 +21,11 @@ export default function Project(props) {
     return (<div className="Project LayoutElement">
         <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
         <div className="ProjectPageContent">
-            <h1 className="ProjectTitle">{project.name}</h1>
+            <h1 className="ProjectTitle">{strings[project.name]}</h1>
             <div className="ProjectFlexContainer">
                 <div className="ProjectFlexLeft">
                     <a className="ProjectDescriptionTitle">{strings.description}</a><br/>
-                    <a className="ProjectDescription">{project.description}</a>
+                    <a className="ProjectDescription">{strings[project.description]}</a>
                     <br/><br/><a className="ProjectDescriptionTitle">{strings.technologies}</a><br/>
                     <ul className="ProjectTechnologies">
                         {technologies}

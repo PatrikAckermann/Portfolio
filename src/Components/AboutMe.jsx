@@ -15,7 +15,7 @@ export default function AboutMe(props) {
     if (context.data !== undefined) {
         cards = context.data.about.map(x => {
             cardId += 1
-            return <Card key={cardId} id={cardId} selectedCard={selectedCard} title={x.name} text={x.text} imgs={x.imgs} setImgs={switchImgs}/>
+            return <Card key={cardId} strings={strings} id={cardId} selectedCard={selectedCard} title={x.name} text={x.text} imgs={x.imgs} setImgs={switchImgs}/>
         })
     }
 
@@ -58,8 +58,8 @@ function Card(props) {
 
     return (
         <div className={cardClass} onClick={() => props.imgs.length > 0 ? props.setImgs(props.imgs, props.id) : nothing()}>
-            <h2 className="CardTitle">{props.title}</h2>
-            <p className="CardText">{props.text}</p>
+            <h2 className="CardTitle">{props.strings[props.title]}</h2>
+            <p className="CardText">{props.strings[props.text]}</p>
         </div>
     )
 }
