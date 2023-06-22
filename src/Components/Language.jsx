@@ -11,7 +11,7 @@ export default function Language() {
     var skills = []
 
     projects = language.projects.map(project => {
-        return <li tabIndex="0" key={project} className="LanguageListItem Hover" onClick={() => context.scrollToArea("projects/" + project)}>{context.data.projects[project].name}</li>
+        return <li tabIndex="0" key={project} className="LanguageListItem Hover" onClick={() => context.scrollToArea("projects/" + project)}>{strings[context.data.projects[project].name]}</li>
     })
 
     skills = language.skills.map(skill => {

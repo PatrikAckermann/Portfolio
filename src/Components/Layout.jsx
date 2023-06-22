@@ -9,12 +9,8 @@ import React from "react"
 export default function Layout() {
     var loaderData = useLoaderData()
     var data = loaderData[0]
-    var german = loaderData[1]
-    var english = loaderData[2]
-
     var [language, setLanguage] = React.useState(localStorage.getItem("language"))
     if (language === null) {setLanguage("de"); localStorage.setItem("language", "de")}
-
     var strings
     switch(language) {
         case "de":
@@ -24,7 +20,7 @@ export default function Layout() {
             strings = loaderData[2]
             break;
         default:
-            strings = loaderData[2]
+            strings = loaderData[1]
             break;
     }
 

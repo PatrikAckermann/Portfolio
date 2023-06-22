@@ -2,9 +2,19 @@
     text-align: center;
 }
 
-.Welcome > h1 {
+.WelcomeTitleContainer {
+    width: 100vw;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.WelcomeTitle {
+    min-width: 100vw;
     font-size: 72px;
+    scroll-snap-align: start;
 }
 
 .FlagContainer {
