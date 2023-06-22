@@ -1,15 +1,7 @@
-.Project {
-
-}
-
 .ProjectPageContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.ProjectTitle {
-    font-size: 72px;
 }
 
 .ProjectFlexContainer {
@@ -24,12 +16,7 @@
     flex-direction: column;
 }
 
-.ProjectDescriptionTitle {
-    font-size: 32px;
-}
-
 .ProjectDescription {
-    font-size: 20px;
     white-space: pre-line;
     margin-bottom: 20px;
 }
@@ -37,10 +24,6 @@
 .ProjectTechnologies {
     list-style-type: circle;
     list-style-position: inside;
-}
-
-.ProjectTechnologies > li {
-    font-size: 20px;
 }
 
 .ProjectButtonsDiv {

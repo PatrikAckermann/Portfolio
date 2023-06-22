@@ -1,13 +1,18 @@
 import "../CSS/Project.css"
 import { Link, useOutletContext, useParams } from "react-router-dom"
 import Imgs from "./Imgs.jsx"
-
+import { Helmet } from "react-helmet"
+import ErrorPage from "./ErrorPage"
 
 export default function Project(props) {
     var context = useOutletContext()
     var params = useParams()
     var project = context.data.projects[params.project]
     var strings = context.strings
+
+    if (project === undefined) {
+        return <ErrorPage message={strings.projectError} strings={strings} scrollToArea={context.scrollToArea}/>
+    }
 
     var images = project.imgs
     var technologies = []
@@ -21,12 +26,17 @@ export default function Project(props) {
     return (<div className="Project LayoutElement">
         <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
         <div className="ProjectPageContent">
+            <Helmet>
+                <title>{strings[project.name]} - Patrik Ackermann</title>
+                <meta name="description" content={strings[project.description]}/>
+                <link rel="canonical" href={"https://ackrmn.dev/projects/" + params.project}/>
+            </Helmet>
             <h1 className="ProjectTitle">{strings[project.name]}</h1>
             <div className="ProjectFlexContainer">
                 <div className="ProjectFlexLeft">
-                    <a className="ProjectDescriptionTitle">{strings.description}</a><br/>
-                    <a className="ProjectDescription">{strings[project.description]}</a>
-                    <br/><br/><a className="ProjectDescriptionTitle">{strings.technologies}</a><br/>
+                    <h3 className="ProjectDescriptionTitle">{strings.description}</h3><br/>
+                    <p className="ProjectDescription">{strings[project.description]}</p>
+                    <br/><br/><h3 className="ProjectDescriptionTitle">{strings.technologies}</h3><br/>
                     <ul className="ProjectTechnologies">
                         {technologies}
                     </ul>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import "../CSS/Home.css"
 import { useNavigate, useLocation } from "react-router-dom"
 
@@ -37,9 +38,13 @@ export default function Home(props) {
 
     return (
     <div className="Home LayoutElement">
+        <Helmet>
+            <title>Patrik Ackermann</title>
+            <meta name="description" content="Entwicklerportfolio von Patrik Ackermann"/>
+        </Helmet>
         <div className="HomeTitleSection">
             <h1 tabIndex={tabIndex} className="HomeTitle Hover" onClick={() => changePage("about")}>Patrik Ackermann</h1>
-            <h2 className="HomeSubtitle">{strings.subtitle}</h2>
+            <h4 className="HomeSubtitle">{strings.subtitle}</h4>
         </div>
         <div className="HomeSelectionContainer">
             <div className="HomeSelection">

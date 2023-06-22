@@ -1,11 +1,17 @@
+import { Helmet } from "react-helmet"
 import "../CSS/Language.css"
 import { Link, useOutletContext, useParams } from "react-router-dom"
+import ErrorPage from "./ErrorPage"
 
 export default function Language() {
     var context = useOutletContext()
     var params = useParams()
     var language = context.data.languages[params.language]
     var strings = context.strings
+
+    if (language === undefined) {
+        return <ErrorPage message={strings.languageError} strings={strings} scrollToArea={context.scrollToArea}/>
+    }
 
     var projects = []
     var skills = []
@@ -20,19 +26,25 @@ export default function Language() {
 
     return (
         <div className="Language LayoutElement">
+            <Helmet>
+                <title>{strings[language.name]} - Patrik Ackermann</title>
+                <meta name="description" content={strings[language.description]}></meta>
+                <link rel="canonical" href={"https://ackrmn.dev/languages/" + params.language}/>
+            </Helmet>
             <button tabIndex="0" onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
             <div className="LanguagePageContent">
                 <h1 className="LanguageTitle">{strings[language.name]}</h1>
                 <div className="LanguageFlexContainer">
                     <div className="LanguageFlexLeft">
+                        <h3>{strings.description}</h3>
                         <p className="LanguageDescription">{strings[language.description]}</p>
                     </div>
                     <div className="LanguageFlexRight">
-                        <h2 className="LanguageProjectsTitle LanguageFlexRightTitle">{strings.projects}</h2>
+                        <h3 className="LanguageProjectsTitle LanguageFlexRightTitle">{strings.projects}</h3>
                         <ul>
                             {projects}
                         </ul>
-                        <h2 className="LanguageSkillsTitle LanguageFlexRightTitle">{strings.skills}</h2>
+                        <h3 className="LanguageSkillsTitle LanguageFlexRightTitle">{strings.skills}</h3>
                         <ul>    
                             {skills}
                         </ul>

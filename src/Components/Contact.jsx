@@ -2,6 +2,7 @@ import "../CSS/Contact.css"
 import { useOutletContext } from "react-router-dom"
 import React from "react"
 import mailtoLink from "mailto-link"
+import { Helmet } from "react-helmet"
 
 export default function Welcome(props) {
     var context = useOutletContext()
@@ -20,6 +21,11 @@ export default function Welcome(props) {
     }
 
     return (<div className="Contact LayoutElement">
+        <Helmet>
+            <title>{strings.contact} - Patrik Ackermann</title>
+            <meta name="description" content={strings.CONTACT}/>
+            <link rel="canonical" href="https://ackrmn.dev/contact"/>
+        </Helmet>
         <button onClick={() => context.scrollToArea("")} className="BackButton ContactBackButton">{strings.back}</button>
         <div className="ContactPageContent">
             <h1 className="ContactTitle">{strings.contact}</h1>

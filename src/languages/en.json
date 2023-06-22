@@ -5,7 +5,13 @@
     "programmingLanguages": "Programming Languages",
     "projects": "Projects",
     "contact": "Contact",
+    "language": "Language",
+    "project": "Project",
     "mobileAlert": "The usage of this site on mobile is not recommended. For the best experience, open it on a PC.",
+    "languageError": "The programming language couldn't be found. Go back to the homepage and try again.",
+    "projectError": "This project couldn't be found. Go back to the homepage and try again.",
+    "error": "Error",
+    "errorMessage": "An error occurred.",
 
     "ABOUT PAGE": "",
     "about": "About me",
@@ -21,7 +27,7 @@
     "download": "Download",
     "seeOnNPM": "See on NPM",
 
-    "CONTACT PAGE": "",
+    "CONTACT": " Send an E-Mail.",
     "subject": "Subject",
     "message": "Message",
     "sendMail": "Send E-Mail",
@@ -52,7 +58,7 @@
     "sqlName": "SQL",
     "sqlDescription": "",
 
-    "ABOUT": "",
+    "ABOUT": "Learn more about what I do when I'm not programming.",
     "testTitle": "Test",
     "testText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 }

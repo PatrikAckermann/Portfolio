@@ -23,7 +23,6 @@ button {
     border: none;
     border-radius: 20px;
     padding: 10px 40px 10px 40px; /*TOP RIGHT BOTTOM LEFT*/
-    font-size: 16px;
     transition-duration: 0.2s;
 }
 
@@ -57,4 +56,33 @@ button:active {
 
 .BackButton {
     margin: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+p, li, button {
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 400;
 }

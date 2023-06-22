@@ -2,6 +2,7 @@ import "../CSS/AboutMe.css"
 import { useOutletContext } from "react-router-dom"
 import React from "react"
 import Imgs from "./Imgs.jsx"
+import { Helmet } from "react-helmet"
 
 export default function AboutMe(props) {
     var context = useOutletContext()
@@ -32,6 +33,11 @@ export default function AboutMe(props) {
     }
     
     return (<div className="AboutMe LayoutElement">
+        <Helmet>
+            <title>{strings.about} - Patrik Ackermann</title>
+            <meta name="description" content={strings.ABOUT}/>
+            <link rel="canonical" href="https://ackrmn.dev/about"/>
+        </Helmet>
         <button onClick={() => context.scrollToArea("")} className="BackButton">{strings.back}</button>
         <h1 className="AboutTitle">{strings.about}</h1>
         <div className="AboutFlex">

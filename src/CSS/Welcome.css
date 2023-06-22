@@ -13,7 +13,6 @@
 
 .WelcomeTitle {
     min-width: 100vw;
-    font-size: 72px;
     scroll-snap-align: start;
 }
 

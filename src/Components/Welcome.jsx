@@ -26,7 +26,6 @@ export default function Welcome(props) {
 
     function openPortfolio() {
         context.scrollToArea("")
-        animationActive = false
     }
 
     return (<div className="Welcome LayoutElement">
