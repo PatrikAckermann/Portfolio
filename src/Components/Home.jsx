@@ -10,7 +10,7 @@ export default function Home(props) {
     var projectListItems = []
     var strings = props.strings
 
-    var tabIndex = location.pathname === "/" ? "0" : "-1"
+    var tabIndex = props.currentPage === "" ? "0" : "-1"
 
     if(loaderData === undefined) {
         return <div className="Home LayoutElement"></div>

@@ -4,6 +4,8 @@ import React from "react"
 
 export default function Welcome(props) {
     var context = useOutletContext()
+    console.log(context.currentPage)
+    var tabIndex = context.currentPage === "welcome" ? "0" : "-1"
 
     function setLanguage(language) {
         if (language === "en") {alert("Warning: This language is not finished yet. Some parts of the site might not contain text.")}
@@ -28,6 +30,12 @@ export default function Welcome(props) {
         context.scrollToArea("")
     }
 
+    function onEnter(event) {
+        if (event.key === "Enter") {
+            setLanguage(event.target.id)
+        }
+    }
+
     return (<div className="Welcome LayoutElement">
         <div className="WelcomeTitleContainer TextAnimation" id="TextAnimation">
             <div className="titleContainer">
@@ -40,9 +48,9 @@ export default function Welcome(props) {
             </div>
         </div>
         <div className="FlagContainer">
-            <h1 className={context.language === "de" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("de")}>🇩🇪</h1>
-            <h1 className={context.language === "en" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("en")}>🇬🇧</h1>
+            <h1 tabIndex={tabIndex} id="de" onKeyUp={onEnter} className={context.language === "de" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("de")}>🇩🇪</h1>
+            <h1 tabIndex={tabIndex} id="en" onKeyUp={onEnter} className={context.language === "en" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("en")}>🇬🇧</h1>
         </div>
-        <button onClick={openPortfolio} tabIndex="0">{context.strings.openPortfolio}</button>
+        <button onClick={openPortfolio} tabIndex={tabIndex}>{context.strings.openPortfolio}</button>
     </div>)
 }

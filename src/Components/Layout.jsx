@@ -4,8 +4,11 @@ import Home from "./Home"
 import Project from "./Project"
 import { useLoaderData, useNavigate, useLocation } from "react-router-dom"
 import React from "react"
+import UAParser from "ua-parser-js"
 
 var currentPage = "welcome"
+var parser = new UAParser()
+var browser = parser.getBrowser()
 
 export default function Layout() {
     var loaderData = useLoaderData()
@@ -52,14 +55,29 @@ export default function Layout() {
         } else {
             var obj = {left: window.innerWidth, top: window.innerHeight - 40, behavior: "smooth"}
         }
-        container.scroll(obj)
         if (!resize) {
             if (name === "") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
-                setTimeout(() => navigate(name), 300)
+                var duration = 500 // Duration needs to be different on browsers because of varying smooth scroll behavior animations
+                switch(browser.name) {
+                    case "Firefox":
+                        duration = 300
+                        break;
+                    case "Chrome":
+                        duration = 700
+                        break;
+                    case "Edge":
+                        duration = 500
+                        break;
+                    default:
+                        duration = 500
+                        break;
+                }
+                setTimeout(() => navigate(name), duration)
             } else {
                 navigate(name)
             }
         }
+        setTimeout(() => container.scroll(obj), 1) // 1ms delay needed on Chromium browser. Otherwise it won't scroll right after navigate
     }
 
     window.scrollToArea = scrollToArea
@@ -79,8 +97,8 @@ export default function Layout() {
             <Empty/>
             {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea, data: data, language: language, setLanguage: setLanguage, strings: strings}}/>
-            <Home loaderData={data} scrollToArea={scrollToArea} strings={strings}/>
+            <Outlet context={{scrollToArea: scrollToArea, data: data, language: language, setLanguage: setLanguage, strings: strings, currentPage: currentPage}}/>
+            <Home loaderData={data} scrollToArea={scrollToArea} strings={strings} currentPage={currentPage}/>
             {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
             <Empty/>
             {location.pathname.startsWith("/contact") ? <Outlet context={{scrollToArea: scrollToArea, strings: strings}}/> : <Empty/>}
