@@ -98,7 +98,7 @@
         },
         "minesweeper": {
             "name": "minesweeperTitle",
-            "description": "mineSweeperDescription",
+            "description": "minesweeperDescription",
             "technologies": ["Python", "Tkinter"],
             "imgs": ["img/Minesweeper1.png", "img/Minesweeper2.png"],
             "button1": {

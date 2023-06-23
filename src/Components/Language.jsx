@@ -13,11 +13,17 @@ export default function Language() {
         return <ErrorPage message={strings.languageError} strings={strings} scrollToArea={context.scrollToArea}/>
     }
 
+    function onEnter(event) {
+        if (event.key === "Enter") {
+            context.scrollToArea(event.target.id)
+        }
+    }
+
     var projects = []
     var skills = []
 
     projects = language.projects.map(project => {
-        return <li tabIndex="0" key={project} className="LanguageListItem Hover" onClick={() => context.scrollToArea("projects/" + project)}>{strings[context.data.projects[project].name]}</li>
+        return <li id={"projects/" + project} onKeyUp={onEnter} tabIndex="0" key={project} className="LanguageListItem Hover" onClick={() => context.scrollToArea("projects/" + project)}>{strings[context.data.projects[project].name]}</li>
     })
 
     skills = language.skills.map(skill => {
