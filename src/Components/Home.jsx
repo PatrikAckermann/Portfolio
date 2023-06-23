@@ -44,7 +44,7 @@ export default function Home(props) {
         </Helmet>
         <div className="HomeTitleSection">
             <h1 tabIndex={tabIndex} className="HomeTitle Hover" onClick={() => changePage("about")}>Patrik Ackermann</h1>
-            <h4 className="HomeSubtitle">{strings.subtitle}</h4>
+            <h2 style={{fontSize: "24px", fontWeight: "500"}}className="HomeSubtitle">{strings.subtitle}</h2>
         </div>
         <div className="HomeSelectionContainer">
             <div className="HomeSelection">

@@ -5,6 +5,7 @@ import Project from "./Project"
 import { useLoaderData, useNavigate, useLocation } from "react-router-dom"
 import React from "react"
 
+var currentPage = "welcome"
 
 export default function Layout() {
     var loaderData = useLoaderData()
@@ -31,10 +32,16 @@ export default function Layout() {
     var navigate = useNavigate()
     var location = useLocation()
 
-    function scrollToArea(name) {
+    function scrollToArea(name, resize=false) {
+        if (resize === false) {
+            currentPage = name
+        }
+
         var container = document.getElementsByClassName("LayoutContainer")[0]
 
-        if (name.startsWith("projects")) {
+        if (name.startsWith("welcome")) {
+            obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
+        } else if (name.startsWith("projects")) {
             var obj = {left: window.innerWidth * 2, top: window.innerHeight - 40, behavior: "smooth"}
         } else if (name.startsWith("languages")){
             var obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
@@ -46,10 +53,12 @@ export default function Layout() {
             var obj = {left: window.innerWidth, top: window.innerHeight - 40, behavior: "smooth"}
         }
         container.scroll(obj)
-        if (name === "") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
-            setTimeout(() => navigate(name), 300)
-        } else {
-            navigate(name)
+        if (!resize) {
+            if (name === "") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
+                setTimeout(() => navigate(name), 300)
+            } else {
+                navigate(name)
+            }
         }
     }
 
@@ -57,7 +66,11 @@ export default function Layout() {
 
     React.useEffect(() => {
         var container = document.getElementsByClassName("LayoutContainer")[0]
+        localStorage.setItem("currentPage", "welcome")
         setTimeout(() => container.scrollTo({left: 0, top: window.innerHeight - 40, behavior: "smooth"}), 500)
+        addEventListener("resize", (event) => {
+            scrollToArea(currentPage, true)
+        })
     }, [])
 
     return (
