@@ -2,28 +2,25 @@ import "../CSS/Welcome.css"
 import { useOutletContext } from "react-router-dom"
 import React from "react"
 
+var scrollPos = 0
+function anim() {
+    var titleContainer = document.getElementById("TextAnimation")
+    if (titleContainer !== null) {
+        scrollPos = scrollPos < 1 ? scrollPos + 1 : 0
+        titleContainer.scroll({left: scrollPos * window.innerWidth, behavior: "smooth"})
+    }    
+    setTimeout(anim, 4000)
+}
+anim()
+
 export default function Welcome(props) {
     var context = useOutletContext()
     var tabIndex = context.currentPage === "welcome" ? "0" : "-1"
 
     function setLanguage(language) {
-        if (language === "en") {alert("Warning: This language is not finished yet. Some parts of the site might not contain text.")}
         context.setLanguage(language)
         localStorage.setItem("language", language)
     }
-
-    setTimeout(() => {
-        var scrollPos = 0
-        var titleContainer = document.getElementById("TextAnimation")
-        function anim() {
-            if (titleContainer !== null) {
-                scrollPos = scrollPos < 1 ? scrollPos + 1 : 0
-                titleContainer.scroll({left: scrollPos * window.innerWidth, behavior: "smooth"})
-                setTimeout(anim, 5000)
-            }    
-        }
-        anim()
-    }, 5000)
 
     function openPortfolio() {
         context.scrollToArea("/home")
