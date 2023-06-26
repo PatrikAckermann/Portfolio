@@ -6,7 +6,7 @@ import { useLoaderData, useNavigate, useLocation } from "react-router-dom"
 import React from "react"
 import UAParser from "ua-parser-js"
 
-var currentPage = "welcome"
+var currentPage = "/welcome"
 var parser = new UAParser()
 var browser = parser.getBrowser()
 
@@ -42,21 +42,21 @@ export default function Layout() {
 
         var container = document.getElementsByClassName("LayoutContainer")[0]
 
-        if (name.startsWith("welcome")) {
-            obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
-        } else if (name.startsWith("projects")) {
+        if (name.startsWith("/welcome")) {
+            var obj = {left: window.innerWidth, top: 0, behavior: "smooth"}
+        } else if (name.startsWith("/projects")) {
             var obj = {left: window.innerWidth * 2, top: window.innerHeight - 40, behavior: "smooth"}
-        } else if (name.startsWith("languages")){
+        } else if (name.startsWith("/languages")){
             var obj = {left: 0, top: window.innerHeight - 40, behavior: "smooth"}
-        } else if (name === "contact") {
+        } else if (name === "/contact") {
             var obj = {left: window.innerWidth, top: window.innerHeight * 2 - 40, behavior: "smooth"}
-        } else if (name === "about") {
+        } else if (name === "/about") {
             var obj = {left: window.innerWidth, top: 0, behavior: "smooth"}
         } else {
             var obj = {left: window.innerWidth, top: window.innerHeight - 40, behavior: "smooth"}
         }
         if (!resize) {
-            if (name === "") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
+            if (name === "/") { // If going to home page wait with changing the Outlet. Otherwise it switches while it still is visible
                 var duration = 500 // Duration needs to be different on browsers because of varying smooth scroll behavior animations
                 switch(browser.name) {
                     case "Firefox":
@@ -84,8 +84,21 @@ export default function Layout() {
 
     React.useEffect(() => {
         var container = document.getElementsByClassName("LayoutContainer")[0]
-        localStorage.setItem("currentPage", "welcome")
-        setTimeout(() => container.scrollTo({left: 0, top: window.innerHeight - 40, behavior: "smooth"}), 500)
+        currentPage = location.pathname
+        if (currentPage === "/") {currentPage = "/welcome"}
+
+        if (location.pathname.startsWith("/languages")) {
+            setTimeout(() => container.scrollTo({left: 0, top: window.innerHeight - 40, behavior: "smooth"}), 500)
+        } else if (location.pathname.startsWith("/projects")) {
+            container.scrollTo({left: window.innerWidth * 2, top: 0, behavior: "instant"})
+            setTimeout(() => container.scrollTo({left: window.innerWidth * 2, top: window.innerHeight - 40, behavior: "smooth"}), 500)
+        } else if (location.pathname.startsWith("/about") || location.pathname === "/") {
+            setTimeout(() => container.scrollTo({left: window.innerWidth, top: 0, behavior: "smooth"}), 500)
+        } else if (location.pathname.startsWith("/contact")) {
+            container.scrollTo({left: 0, top: window.innerHeight * 2 - 40, behavior: "instant"})
+            setTimeout(() => container.scrollTo({left: window.innerWidth, top: window.innerHeight * 2 - 40, behavior: "smooth"}), 500)
+        }
+
         addEventListener("resize", (event) => {
             scrollToArea(currentPage, true)
         })
@@ -95,9 +108,9 @@ export default function Layout() {
     <div className="Layout">
         <div className="LayoutContainer">
             <Empty/>
-            {location.pathname.startsWith("/about") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
+            {(location.pathname.startsWith("/about") || location.pathname === "/") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings, setLanguage: setLanguage, language: language, currentPage: currentPage}}/> : <Empty/>}
             <Empty/>
-            <Outlet context={{scrollToArea: scrollToArea, data: data, language: language, setLanguage: setLanguage, strings: strings, currentPage: currentPage}}/>
+            {location.pathname.startsWith("/languages") ? <Outlet context={{scrollToArea: scrollToArea, data: data, language: language, strings: strings, currentPage: currentPage}}/> : <Empty />}
             <Home loaderData={data} scrollToArea={scrollToArea} strings={strings} currentPage={currentPage}/>
             {location.pathname.startsWith("/projects") ? <Outlet context={{scrollToArea: scrollToArea, data: data, strings: strings}}/> : <Empty/>}
             <Empty/>

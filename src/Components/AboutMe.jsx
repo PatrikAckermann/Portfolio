@@ -38,7 +38,7 @@ export default function AboutMe(props) {
             <meta name="description" content={strings.ABOUT}/>
             <link rel="canonical" href="https://ackrmn.dev/about"/>
         </Helmet>
-        <button onClick={() => context.scrollToArea("")} className="BackButton">{strings.back}</button>
+        <button onClick={() => context.scrollToArea("/")} className="BackButton">{strings.back}</button>
         <h1 className="AboutTitle">{strings.about}</h1>
         <div className="AboutFlex">
             <div className="AboutFlexLeft">
@@ -63,7 +63,7 @@ function Card(props) {
     function nothing() {/* Nothing */}
 
     return (
-        <div className={cardClass} onClick={() => props.imgs.length > 0 ? props.setImgs(props.imgs, props.id) : nothing()}>
+        <div tabIndex="0" className={cardClass} onClick={() => props.imgs.length > 0 ? props.setImgs(props.imgs, props.id) : nothing()}>
             <h2 className="CardTitle">{props.strings[props.title]}</h2>
             <p className="CardText">{props.strings[props.text]}</p>
         </div>

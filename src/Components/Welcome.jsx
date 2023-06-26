@@ -4,7 +4,6 @@ import React from "react"
 
 export default function Welcome(props) {
     var context = useOutletContext()
-    console.log(context.currentPage)
     var tabIndex = context.currentPage === "welcome" ? "0" : "-1"
 
     function setLanguage(language) {

@@ -59,6 +59,12 @@
     "sqlDescription": "",
 
     "ABOUT": "Learn more about what I do when I'm not programming.",
-    "testTitle": "Test",
-    "testText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "about1Title": "",
+    "about1Text": "",
+    "about2Title": "",
+    "about2Text": "",
+    "about3Title": "",
+    "about3Text": "",
+    "about4Title": "",
+    "about4Text": ""
 }

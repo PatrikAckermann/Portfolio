@@ -10,7 +10,7 @@ export default function Imgs(props) {
             count += 1
             var image = img.startsWith("http") ? img : require("./" + img)
             if (img.endsWith("mp4")) {
-                return <div className="ImgContainer" key={count}><video loop autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
+                return <div className="ImgContainer" key={count}><video tabIndex="-1" loop autoPlay src={image} alt="Bild konnte nicht geladen werden."/></div>
             }
             return <div className="ImgContainer" key={count}><img src={image} alt="Bild konnte nicht geladen werden."/></div>
         })

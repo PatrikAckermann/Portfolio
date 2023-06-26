@@ -26,7 +26,7 @@ export default function Welcome(props) {
             <meta name="description" content={strings.CONTACT}/>
             <link rel="canonical" href="https://ackrmn.dev/contact"/>
         </Helmet>
-        <button onClick={() => context.scrollToArea("")} className="BackButton ContactBackButton">{strings.back}</button>
+        <button onClick={() => context.scrollToArea("/")} className="BackButton ContactBackButton">{strings.back}</button>
         <div className="ContactPageContent">
             <h1 className="ContactTitle">{strings.contact}</h1>
             <form className="ContactForm">

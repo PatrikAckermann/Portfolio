@@ -1,7 +1,7 @@
 {
     "back": "Zurück",
     "openPortfolio": "Portfolio öffnen",
-    "subtitle": "Informatiker EFZ Applikationsentwicklung Lernender @ Modern IT Academy (isolutions/gewa)",
+    "subtitle": "Informatiker EFZ Applikationsentwicklung Lehrling @ Modern IT Academy (isolutions/gewa)",
     "programmingLanguages": "Programmiersprachen",
     "projects": "Projekte",
     "contact": "Kontakt",
@@ -59,12 +59,12 @@
     "sqlDescription": "Ich habe Datenbanken in C# mit dem Entity Framework Core und in Python mit SQLite programmiert. Auch mit Hilfe des Microsoft SQL Server Management Studio konnte ich schon Datenbanken erstellen.\n\nMit SQLite habe ich mehrere Datenbanken für meine Chat App geschrieben. Sowohl auf dem Client als auch auf dem Server habe ich eine Datenbank zum Speichern der Chats programmiert. Für jeden Chat zwischen 2 Personen wird eine eigene Tabelle erstellt. Auf dem Server wird SQLite auch für die Accounts verwendet. Die Passwörter werden für das Speichern in dieser Datenbank verschlüsselt.\n\nFür ein Übungsprojekt habe ich eine Inventar API mit Datenbank in C# und dem Entity Framework entwickelt. Diese Datenbank enthält verschiedene Tabellen für Gegenstände im Inventar, Standorte, Benutzer und mehr. Diese sind über Foreign Keys verknüpft.",
 
     "ABOUT": "Lerne mehr darüber, was ich mache, wenn ich gerade nicht am programmieren bin.",
-    "about1Title": "IT",
-    "about1Text": "Neben dem Programmieren habe ich auch noch weitere Interessen im IT Bereich. Das grösste davon ist die PC Hardware. Ich konfiguriere, baue und upgrade gerne PCs. Einige Projekte davon sind mein eigener PC, der meines Bruders und ein Homeserver. Auch mit der Anwendungen verschiedener Software wie z.B. Linux beschäftige ich mich.",
-    "about2Title": "Gaming",
-    "about2Text": "Wenn ich gerade keinen PC zusammensetze oder etwas am Programmieren bin, spiele ich möglicherweise Videospiele. Diese sind für mein Interesse in der IT verantwortlich, denn dadurch kam erst der Wille einen eigenen PC zu haben. Das Hobby des Programmierens ist durch den Wunsch entstanden, ein eigenes Videospiel zu erstellen.",
-    "about3Title": "Freunde",
-    "about3Text": "Oft verbringe ich Zeit mit Freunden. Dies kann in Form von Online Videospielen oder sonstigen Aktivitäten wie einem Kinobesuch oder einfach nur 'chillen' (was, er ist nicht die ganze Zeit nur am PC??? 😱😲🤯) sein.",
-    "about4Title": "Natur",
-    "about4Text": "Wenn ich nichts am PC mache und meine Freunde gerade nicht da sind, gehe ich in die Natur. Ab und zu gehe ich Wandern oder wenn es ein sehr heisser Tag ist kühle ich mich in einem See ab."
+    "about1Title": "",
+    "about1Text": "",
+    "about2Title": "",
+    "about2Text": "",
+    "about3Title": "",
+    "about3Text": "",
+    "about4Title": "",
+    "about4Text": ""
 }

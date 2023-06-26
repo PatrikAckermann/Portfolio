@@ -24,7 +24,7 @@ export default function Project(props) {
     }
 
     return (<div className="Project LayoutElement">
-        <button onClick={() => context.scrollToArea("")} className="BackButton">Zurück</button>
+        <button onClick={() => context.scrollToArea("/")} className="BackButton">Zurück</button>
         <div className="ProjectPageContent">
             <Helmet>
                 <title>{strings[project.name]} - Patrik Ackermann</title>
