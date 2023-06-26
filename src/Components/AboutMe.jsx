@@ -38,7 +38,7 @@ export default function AboutMe(props) {
             <meta name="description" content={strings.ABOUT}/>
             <link rel="canonical" href="https://ackrmn.dev/about"/>
         </Helmet>
-        <button onClick={() => context.scrollToArea("/")} className="BackButton">{strings.back}</button>
+        <button onClick={() => context.scrollToArea("/home")} className="BackButton">{strings.back}</button>
         <h1 className="AboutTitle">{strings.about}</h1>
         <div className="AboutFlex">
             <div className="AboutFlexLeft">

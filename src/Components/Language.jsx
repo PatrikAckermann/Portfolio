@@ -37,7 +37,7 @@ export default function Language() {
                 <meta name="description" content={strings[language.description]}></meta>
                 <link rel="canonical" href={"https://ackrmn.dev/languages/" + params.language}/>
             </Helmet>
-            <button tabIndex="0" onClick={() => context.scrollToArea("/")} className="BackButton">Zurück</button>
+            <button tabIndex="0" onClick={() => context.scrollToArea("/home")} className="BackButton">Zurück</button>
             <div className="LanguagePageContent">
                 <h1 className="LanguageTitle">{strings[language.name]}</h1>
                 <div className="LanguageFlexContainer">

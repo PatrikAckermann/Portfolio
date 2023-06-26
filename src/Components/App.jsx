@@ -11,6 +11,7 @@ import AboutMe from "./AboutMe"
 var router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Layout/>} loader={Dataloader}>
         <Route index element={<Welcome/>}/>
+        <Route path="home" element={<Welcome/>}/>
         <Route path="projects" element={<Project/>}>
             <Route path=":project"/>
         </Route>

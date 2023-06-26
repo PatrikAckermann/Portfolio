@@ -26,7 +26,7 @@ export default function Welcome(props) {
     }, 5000)
 
     function openPortfolio() {
-        context.scrollToArea("")
+        context.scrollToArea("/home")
     }
 
     function onEnter(event) {
