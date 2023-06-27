@@ -44,8 +44,8 @@ export default function Welcome(props) {
             </div>
         </div>
         <div className="FlagContainer">
-            <h1 tabIndex={tabIndex} id="de" onKeyUp={onEnter} className={context.language === "de" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("de")}>🇩🇪</h1>
-            <h1 tabIndex={tabIndex} id="en" onKeyUp={onEnter} className={context.language === "en" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("en")}>🇬🇧</h1>
+            <img alt="🇩🇪" src="/svg/de.svg" tabIndex={tabIndex} id="de" onKeyUp={onEnter} className={context.language === "de" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("de")}/>
+            <img alt="🇬🇧" src="/svg/en.svg" tabIndex={tabIndex} id="en" onKeyUp={onEnter} className={context.language === "en" ? "Flag SelectedFlag" : "Flag"} onClick={() => setLanguage("en")}/>
         </div>
         <button onClick={openPortfolio} tabIndex={tabIndex}>{context.strings.openPortfolio}</button>
     </div>)
