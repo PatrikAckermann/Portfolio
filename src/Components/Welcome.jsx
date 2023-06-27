@@ -15,7 +15,7 @@ anim()
 
 export default function Welcome(props) {
     var context = useOutletContext()
-    var tabIndex = context.currentPage === "welcome" ? "0" : "-1"
+    var tabIndex = context.currentPage === "/" ? "0" : "-1"
 
     function setLanguage(language) {
         context.setLanguage(language)

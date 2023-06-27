@@ -27,6 +27,7 @@
 
 .HomeSelection {
     width: 50vw;
+    height: calc(100vh - 340px);
 }
 
 .HomeSelection > ul {
@@ -34,7 +35,8 @@
     list-style-position: inside;
     display: flex;
     flex-direction: column;
-    
+
+    height: calc(100vh - 400px);
     overflow-y: auto;
 
     /* Left aligned text*/

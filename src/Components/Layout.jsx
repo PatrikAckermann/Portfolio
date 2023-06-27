@@ -24,7 +24,7 @@ export default function Layout() {
             strings = loaderData[2]
             break;
         default:
-            strings = loaderData[1]
+            strings = loaderData[2]
             break;
     }
 
