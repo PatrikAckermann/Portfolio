@@ -28,6 +28,12 @@ export default function Layout() {
             break;
     }
 
+    window.onpopstate = (e) => {
+        var targetPath = e.target.location.pathname
+        navigate(location.pathname, {replace: true})
+        scrollToArea(targetPath, false, true)
+    }
+
     if (mobileCheck() === true) {
         alert(strings.mobileAlert)
     }
@@ -35,7 +41,7 @@ export default function Layout() {
     var navigate = useNavigate()
     var location = useLocation()
 
-    function scrollToArea(name, resize=false) {
+    function scrollToArea(name, resize=false, replace=false) {
         if (resize === false) {
             currentPage = name
         }
@@ -72,9 +78,9 @@ export default function Layout() {
                         duration = 500
                         break;
                 }
-                setTimeout(() => navigate(name), duration)
+                setTimeout(() => navigate(name, {replace: replace}), duration)
             } else {
-                navigate(name)
+                navigate(name, {replace: replace})
             }
         }
         setTimeout(() => container.scroll(obj), 1) // 1ms delay needed on Chromium browser. Otherwise it won't scroll right after navigate
