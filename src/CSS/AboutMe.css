@@ -17,13 +17,12 @@
 }
 
 .AboutFlexLeft {
-    flex-grow: 1;
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 20vw);
     justify-content: center;
     margin: 30px;
-    margin-bottom: auto;
-    height: calc(100vh - 250px);
+    height: calc(100vh - 300px);
     overflow-y: auto;
 }
 
@@ -33,7 +32,7 @@
     padding: 10px;
     user-select: none;
     transition-duration: 0.2s;
-    border-radius: 20px;
+    word-wrap:break-word;
 }
 
 .SelectedCard {

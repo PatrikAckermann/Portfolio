@@ -28,6 +28,7 @@ button {
 
 button:hover {
     background-color: #bbbbbb;
+    cursor: pointer;
 }
 
 button:active {
@@ -67,6 +68,7 @@ h1 {
 h2 {
     font-size: 48px;
     line-height: 1.2;
+    font-weight: 500;
 }
 
 h3 {
