@@ -1,7 +1,7 @@
 {
     "back": "Zurück",
     "openPortfolio": "Portfolio öffnen",
-    "subtitle": "Informatiker EFZ Applikationsentwicklung Lehrling @ Modern IT Academy (isolutions/gewa)",
+    "subtitle": "Informatiker EFZ Applikationsentwicklung Lehrling @ Modern IT Academy (isolutions/GEWA)",
     "programmingLanguages": "Programmiersprachen",
     "projects": "Projekte",
     "contact": "Kontakt",
@@ -58,13 +58,13 @@
     "sqlName": "SQL",
     "sqlDescription": "Ich habe Datenbanken in C# mit dem Entity Framework Core und in Python mit SQLite programmiert. Auch mit Hilfe des Microsoft SQL Server Management Studio konnte ich schon Datenbanken erstellen.\n\nMit SQLite habe ich mehrere Datenbanken für meine Chat App geschrieben. Sowohl auf dem Client als auch auf dem Server habe ich eine Datenbank zum Speichern der Chats programmiert. Für jeden Chat zwischen 2 Personen wird eine eigene Tabelle erstellt. Auf dem Server wird SQLite auch für die Accounts verwendet. Die Passwörter werden für das Speichern in dieser Datenbank verschlüsselt.\n\nFür ein Übungsprojekt habe ich eine Inventar API mit Datenbank in C# und dem Entity Framework entwickelt. Diese Datenbank enthält verschiedene Tabellen für Gegenstände im Inventar, Standorte, Benutzer und mehr. Diese sind über Foreign Keys verknüpft.",
 
-    "ABOUT": "Lerne mehr darüber, was ich mache, wenn ich gerade nicht am programmieren bin.",
-    "about1Title": "",
-    "about1Text": "",
-    "about2Title": "",
+    "ABOUT": "Was ich mache, wenn ich gerade nicht am programmieren bin.",
+    "about1Title": "IT",
+    "about1Text": "Neben dem Programmieren, habe ich auch weitere Hobbies im IT Bereich. Eines davon ist PC Hardware. Ich konfiguriere, baue und upgrade PCs. Ich habe unter anderem meinen eigenen PC geupgradet, den PC meines Bruders gebaut und auch einen Homeserver gebaut.",
+    "Xabout2Title": "Wandern",
     "about2Text": "",
     "about3Title": "",
     "about3Text": "",
-    "about4Title": "",
-    "about4Text": ""
+    "Xabout4Title": "Videospiele",
+    "Xabout4Text": "Diese sind für mein Interesse in der Informatik verantwortlich. Wegen Games wollte ich meinen ersten PC haben. Durch den Wunsch ein eigenes Videospiel zu erstellen, habe ich das Programmieren entdeckt."
 }
