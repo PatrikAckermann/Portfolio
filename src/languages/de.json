@@ -47,6 +47,8 @@
     "minesweeperDescription": "Ein klassisches Minesweeper. Es wurde in Python mit der GUI Bibliothek 'Tkinter' programmiert. \n\nMit einem simplen Algorithmus wird bei einem Klick das Feld aufgedeckt und die Zahlen ausgerechnet.",
     "todoListsTitle": "Todo Listen",
     "todoListsDescription": "Mit der Todo-Listen Webseite kann man Listen erstellen, mit Dingen die noch zu erledigen sind. Die 'Todos' können als erledigt markiert werden.\n\nDie Webseite ist in purem Javascript, ohne Libraries, geschrieben. Mittlerweile würde ich diese Webseite in React erstellen.\n\nDie Daten werden in den Cookies gespeichert, damit sie nicht verloren gehen.",
+    "portfolioTitle": "Portfolio",
+    "portfolioDescription": "Dieses Portfolio wurde mit JavaScript und dem React Framework programmiert.\n\nDie Seite verwendet ein CSS Grid für die verschiedenen Seiten. Jedes Grid Element hat die Grösse des Browserfensters und es wird über Javascript gescrollt. Um die Navigation zu erleichtern und um Support für URL Routes hinzuzufügen, verwende ich React Router.",
 
     "LANGUAGES": "",
     "csName": "C#",

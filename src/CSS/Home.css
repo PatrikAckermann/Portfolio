@@ -9,7 +9,6 @@
 }
 
 .HomeTitle {
-    cursor: pointer;
     user-select: none;
     margin-top: 50px;
     transition-duration: 0.5s;

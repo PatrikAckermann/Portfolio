@@ -49,7 +49,7 @@ export default function Home(props) {
             <meta name="description" content="Entwicklerportfolio von Patrik Ackermann"/>
         </Helmet>
         <div className="HomeTitleSection">
-            <h1 tabIndex={tabIndex} className="HomeTitle Hover" onClick={() => changePage("/about")} id="about" onKeyUp={onEnter}>Patrik Ackermann</h1>
+            <h1 tabIndex={tabIndex} className="HomeTitle" /*onClick={() => changePage("/about")}*/ id="about" /*onKeyUp={onEnter}*/>Patrik Ackermann</h1>
             <h2 style={{fontSize: "24px", fontWeight: "500"}}className="HomeSubtitle">{strings.subtitle}</h2>
         </div>
         <div className="HomeSelectionContainer">
@@ -69,7 +69,7 @@ export default function Home(props) {
         <div className="HomeButtons">
             <button tabIndex={tabIndex} className="HomeButton" onClick={() => window.open("https://github.com/PatrikAckermann")}>GitHub</button>
             <button tabIndex={tabIndex} className="HomeButton" onClick={() => props.scrollToArea("/contact")}>{strings.contact}</button>
-            <button tabIndex={tabIndex} className="HomeButton">Button</button>
+            {/*<button tabIndex={tabIndex} className="HomeButton">Button</button>*/}
         </div>
     </div>)
 }

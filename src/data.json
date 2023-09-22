@@ -16,13 +16,13 @@
             "name": "jsName",
             "description": "jsDescription",
             "projects": ["posterGenerator", "csvParser"],
-            "skills": ["NPM", "React", "React Router"]
+            "skills": ["NPM", "React", "React Router", "Azure Functions"]
         },
         "sql": {
             "name": "sqlName",
             "description": "sqlDescription",
             "projects": ["chatApp"],
-            "skills": ["Entity Framework Core", "SQLite", "Microsoft SQL Server Management Studio"]
+            "skills": ["Entity Framework Core", "Azure SQL", "SQLite", "Microsoft SQL Server Management Studio"]
         }
     },
     "projects": {
@@ -38,6 +38,19 @@
             "button2": {
                 "name": "seeOnGithub",
                 "link": "https://github.com/PatrikAckermann/poster-generator"
+            }
+        },
+        "portfolio": {
+            "name": "portfolioTitle",
+            "description": "portfolioDescription",
+            "technologies": ["JavaScript", "HTML", "CSS", "React", "React Router"],
+            "button1": {
+                "name": "openPage",
+                "link": "https://ackrmn.dev/"
+            },
+            "button2": {
+                "name": "seeOnGithub",
+                "link": "https://github.com/PatrikAckermann/portfolio"
             }
         },
         "chatApp": {

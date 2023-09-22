@@ -47,6 +47,8 @@
     "minesweeperDescription": "Just another Minesweeper. It's made in Python with the GUI library 'tkinter'.\n\nThe game uses a simple algorithm for revealing fields/areas you click on.",
     "todoListsTitle": "Todo Lists",
     "todoListsDescription": "With the Todo-List website you can create lists with things that you have to do. The Todos can be marked as done.\n\nThe website is made with plain javascript. If I were to remake this website, I'd do it in React now.\n\nThe data gets saved in cookies so it isn't being lost.",
+    "portfolioTitle": "Portfolio",
+    "portfolioDescription": "This portfolio is made with Javascript and the React framework.\n\nThe page uses a CSS grid for the animations. Each grid element is the size of the browser window and it is being scrolled over Javascript. For easier navigation and for URL routing support I am using React Router.",
 
     "LANGUAGES": "",
     "csName": "C#",
